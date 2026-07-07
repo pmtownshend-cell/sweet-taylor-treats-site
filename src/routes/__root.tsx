@@ -72,9 +72,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_TITLE = "Taylor Sweet Treats — Custom Sugar Cookies for Every Occasion";
+const SITE_TITLE = "Taylor Sweet Treats — Handmade Custom Sugar Cookies";
 const SITE_DESC =
-  "Hand-piped custom sugar cookies for weddings, birthdays, baby showers, holidays and corporate events. Bespoke edible art baked to order from our home kitchen.";
+  "Handmade, hand-piped custom sugar cookies for weddings, birthdays, baby showers, holidays, and corporate events. Baked to order in our home kitchen."; 
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
