@@ -68,10 +68,10 @@ function Nav() {
           Taylor Sweet Treats
         </a>
         <div className="hidden gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-muted md:flex">
-          <a href="#gallery" className="transition-colors hover:text-foreground">The Gallery</a>
-          <a href="#about" className="transition-colors hover:text-foreground">Our Story</a>
+          <a href="#gallery" className="transition-colors hover:text-foreground">See the cookies</a>
+          <a href="#about" className="transition-colors hover:text-foreground">Meet Taylor</a>
           <a href="#quote" className="text-accent transition-colors hover:text-foreground">
-            Request Quote
+            Get a quote
           </a>
         </div>
       </div>
@@ -83,12 +83,12 @@ function Hero() {
   return (
     <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
       <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Bespoke Confectionery
+        Custom sugar cookies, made by hand
       </span>
       <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-        Edible art for
+        Cookies that make
         <br />
-        <span className="italic">unforgettable</span> moments.
+        <span className="italic">every occasion</span> sweeter.
       </h1>
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
@@ -115,9 +115,9 @@ function Gallery() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-md">
-            <h2 className="mb-4 text-pretty font-display text-4xl italic">The Archive</h2>
+            <h2 className="mb-4 text-pretty font-display text-4xl italic">A few favorite designs</h2>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Every cookie is hand-piped with precision, designed to complement your event's unique aesthetic.
+              Every batch is baked fresh, hand-piped, and designed around your event. Pick a category below to see what we’ve been up to.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -186,26 +186,25 @@ function About() {
       </div>
       <div className="order-1 md:order-2">
         <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          The Maker
+          Meet Taylor
         </span>
         <h2 className="mb-8 font-display text-4xl italic leading-tight md:text-5xl">
-          Born from a passion for detail.
+          Baked with love — and a lot of piping bags.
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground">
-          Taylor Sweet Treats began in a sun-drenched home kitchen with a simple mission: to turn
-          the humble sugar cookie into a canvas for celebration. Every order is baked fresh, hand
-          decorated, and made just for you.
+          Taylor Sweet Treats started in a cozy home kitchen with one simple idea: sugar cookies should be just as fun
+          to look at as they are to eat. Every order is baked fresh, hand decorated, and made specially for you.
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
-          We specialize in the meticulous art of royal icing, blending traditional baking with a
-          modern aesthetic to create treats that look as exceptional as they taste.
+          We love the tiny details — the perfect shade of icing, the little florals, the monogram that matches your
+          invitation. Whether it’s a birthday, wedding, or “just because,” we’re here to make your treats feel personal.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
           <div className="grid size-12 place-items-center rounded-full bg-accent/10">
             <div className="size-2 rounded-full bg-accent" />
           </div>
           <p className="font-mono text-[11px] uppercase tracking-widest">
-            Baked to order — from our home kitchen to your celebration
+            From our home kitchen to your celebration table
           </p>
         </div>
       </div>
@@ -233,15 +232,15 @@ function QuoteForm() {
     const details = String(fd.get("details") ?? "").trim();
 
     if (!name || !email || !details) {
-      toast.error("Please fill in your name, email, and design details.");
+      toast.error("Mind filling in your name, email, and what you’re dreaming up?");
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      toast.error("That email doesn't look quite right.");
+      toast.error("That email looks a little off — want to double-check it?");
       return;
     }
     if (name.length > 100 || details.length > 2000) {
-      toast.error("Please keep your entries within the character limits.");
+      toast.error("Please keep your name and details within the character limits.");
       return;
     }
 
@@ -249,7 +248,7 @@ function QuoteForm() {
     // No backend wired yet — simulate a successful submission and reset the form.
     await new Promise((r) => setTimeout(r, 600));
     setSubmitting(false);
-    toast.success("Request received. Taylor will reply within 2 business days.");
+    toast.success("Got it! Taylor will be in touch within 2 business days.");
     (e.target as HTMLFormElement).reset();
   };
 
@@ -261,25 +260,25 @@ function QuoteForm() {
     <section id="quote" className="bg-ink py-24 text-ink-foreground md:py-32">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center md:mb-20">
-          <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Begin Your Commission</h2>
+          <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Let’s get this party started</h2>
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
-            Custom orders typically require 3 weeks notice
+            Most orders need about 3 weeks notice — the sooner, the better!
           </p>
         </div>
 
         <form onSubmit={onSubmit} className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
-          <Field label="Name" className={labelCls}>
+          <Field label="Your name" className={labelCls}>
             <input required name="name" type="text" maxLength={100} placeholder="Alex Taylor" className={inputCls} />
           </Field>
           <Field label="Email" className={labelCls}>
             <input required name="email" type="email" maxLength={255} placeholder="hello@example.com" className={inputCls} />
           </Field>
-          <Field label="Phone (Optional)" className={labelCls}>
+          <Field label="Phone (optional)" className={labelCls}>
             <input name="phone" type="tel" maxLength={30} placeholder="(555) 000-0000" className={inputCls} />
           </Field>
-          <Field label="Event Type" className={labelCls}>
+          <Field label="What kind of event?" className={labelCls}>
             <select required name="eventType" defaultValue="" className={inputCls + " appearance-none"}>
-              <option value="" disabled className="text-stone-900">Select an event…</option>
+              <option value="" disabled className="text-stone-900">Pick an event…</option>
               {EVENT_TYPES.map((t) => (
                 <option key={t} value={t} className="text-stone-900">
                   {t}
@@ -287,16 +286,16 @@ function QuoteForm() {
               ))}
             </select>
           </Field>
-          <Field label="Event Date" className={labelCls}>
+          <Field label="Event date" className={labelCls}>
             <input required name="eventDate" type="date" className={inputCls + " [color-scheme:dark]"} />
           </Field>
-          <Field label="Quantity (dozens)" className={labelCls}>
+          <Field label="How many cookies? (dozens)" className={labelCls}>
             <input required name="quantity" type="number" min={1} max={999} placeholder="2" className={inputCls} />
           </Field>
-          <Field label="Budget Range (Optional)" className={labelCls}>
+          <Field label="Budget range (optional)" className={labelCls}>
             <input name="budget" type="text" maxLength={60} placeholder="e.g. $150 – $300" className={inputCls} />
           </Field>
-          <Field label="Inspiration Photos (Optional)" className={labelCls}>
+          <Field label="Inspiration photos (optional)" className={labelCls}>
             <input
               name="inspiration"
               type="file"
@@ -306,13 +305,13 @@ function QuoteForm() {
             />
           </Field>
           <div className="md:col-span-2">
-            <Field label="Theme & Design Details" className={labelCls}>
+            <Field label="Tell us your theme, colors, and vibe" className={labelCls}>
               <textarea
                 required
                 name="details"
                 maxLength={2000}
                 rows={4}
-                placeholder="Describe your theme, colors, shapes, and vision…"
+                placeholder="The more details, the better — colors, shapes, theme, anything you love!"
                 className={inputCls + " resize-none"}
               />
             </Field>
@@ -323,7 +322,7 @@ function QuoteForm() {
               disabled={submitting}
               className="w-full bg-white py-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-stone-900 transition-colors hover:bg-stone-200 disabled:opacity-60"
             >
-              {submitting ? "Sending…" : "Submit Request"}
+              {submitting ? "Sending…" : "Send my request"}
             </button>
           </div>
         </form>
