@@ -166,29 +166,29 @@ function Nav() {
 }
 
 function Hero() {
-  // All cookies live in two side gutters — text zone stays clear.
+  // Cookies scattered along both sides + top/bottom edges, larger sizes.
   const leftCookies = [
-    { src: cookieCookout.url, className: "left-[-10%] top-[2%] w-40 -rotate-12 md:left-[-4%] md:top-[4%] md:w-72" },
-    { src: cookieFootball.url, className: "left-[-8%] top-[40%] w-36 rotate-6 md:left-[-2%] md:top-[42%] md:w-64" },
-    { src: cookieFive.url, className: "left-[8%] bottom-[-4%] w-24 -rotate-6 md:left-[14%] md:bottom-[-2%] md:w-40" },
+    { src: cookieCookout.url, className: "left-[-12%] top-[-4%] w-56 -rotate-12 md:left-[-6%] md:top-[-2%] md:w-[26rem]" },
+    { src: cookieFootball.url, className: "left-[-10%] top-[34%] w-48 rotate-6 md:left-[-4%] md:top-[36%] md:w-[22rem]" },
+    { src: cookieFive.url, className: "left-[4%] bottom-[-8%] w-32 -rotate-12 md:left-[10%] md:bottom-[-6%] md:w-52" },
+    { src: cookieJustMarried.url, className: "left-[18%] top-[8%] w-24 rotate-6 md:left-[24%] md:top-[6%] md:w-40" },
   ];
   const rightCookies = [
-    { src: cookieApple.url, className: "right-[-8%] top-[-2%] w-32 rotate-12 md:right-[-2%] md:top-[2%] md:w-56" },
-    { src: cookieBaby.url, className: "right-[-10%] top-[38%] w-40 -rotate-6 md:right-[-4%] md:top-[38%] md:w-72" },
-    { src: cookieMasters.url, className: "right-[6%] bottom-[-6%] w-28 rotate-6 md:right-[10%] md:bottom-[-4%] md:w-48" },
-    { src: cookieJustMarried.url, className: "right-[16%] top-[18%] w-20 -rotate-12 md:right-[22%] md:top-[20%] md:w-32" },
+    { src: cookieApple.url, className: "right-[-10%] top-[-4%] w-44 rotate-12 md:right-[-4%] md:top-[-2%] md:w-72" },
+    { src: cookieBaby.url, className: "right-[-12%] top-[36%] w-56 -rotate-6 md:right-[-6%] md:top-[34%] md:w-[26rem]" },
+    { src: cookieMasters.url, className: "right-[4%] bottom-[-10%] w-36 rotate-6 md:right-[8%] md:bottom-[-8%] md:w-60" },
   ];
   const all = [...leftCookies, ...rightCookies];
 
   return (
-    <section id="top" className="relative overflow-hidden px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[36rem] md:min-h-[46rem]">
+    <section id="top" className="relative overflow-hidden px-6 pt-24 pb-40 md:pt-32 md:pb-52 min-h-[42rem] md:min-h-[54rem]">
       {all.map((f, i) => (
         <img
           key={i}
           src={f.src}
           alt=""
           aria-hidden
-          className={`pointer-events-none absolute drop-shadow-sm ${f.className}`}
+          className={`pointer-events-none absolute drop-shadow-md ${f.className}`}
         />
       ))}
 
