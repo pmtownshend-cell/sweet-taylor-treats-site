@@ -417,7 +417,7 @@ function QuoteForm() {
         <div className="mb-16 text-center md:mb-20">
           <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Let's get this party started</h2>
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
-            Most orders need about 3 weeks notice — the sooner, the better!
+            Most orders need about 2 weeks notice — the sooner, the better!
           </p>
         </div>
 
@@ -446,9 +446,6 @@ function QuoteForm() {
           </Field>
           <Field label="How many cookies? (dozens)" className={labelCls}>
             <input required name="quantity" type="number" min={1} max={999} placeholder="2" className={inputCls} />
-          </Field>
-          <Field label="Budget range (optional)" className={labelCls}>
-            <input name="budget" type="text" maxLength={60} placeholder="e.g. $150 – $300" className={inputCls} />
           </Field>
           <Field label="Inspiration photos (optional)" className={labelCls}>
             <input
