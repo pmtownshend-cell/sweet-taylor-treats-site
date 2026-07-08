@@ -108,6 +108,10 @@ const GALLERY: GalleryItem[] = [
   { src: occasionTeddyBears.url, alt: "Airbrushed brown teddy bear sugar cookies with paw pads for a DMV bear-themed event", caption: "Teddy Bear Set", category: "occasion" },
   { src: occasionShootingStars.url, alt: "Yellow shooting star and star sugar cookies for a celebration favor set", caption: "Shooting Stars Favors", category: "occasion" },
   { src: occasionBalletSlippers.url, alt: "Pink and gold ballet slipper sugar cookies with piped bows for a dance recital", caption: "Ballet Slippers — Recital", category: "occasion" },
+  { src: occasionTeacherApple.url, alt: "Teacher appreciation sugar cookies with a red apple and notebook paper marked 'A+'", caption: "A+ Teacher Appreciation", category: "occasion" },
+  { src: occasionLemonsTiles.url, alt: "Amalfi inspired sugar cookies with yellow lemons, lemon slices, and blue Mediterranean tile squares", caption: "Amalfi Lemons & Tiles", category: "occasion" },
+  { src: occasionFootball.url, alt: "Game day sugar cookies with a brown football, blue 'Go Team' helmet, and X's and O's playbook", caption: "Game Day — Go Team", category: "occasion" },
+  { src: occasionCookout.url, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
 ];
 
 const PAGE_SIZE = 12;
