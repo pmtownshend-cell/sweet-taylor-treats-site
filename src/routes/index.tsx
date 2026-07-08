@@ -5,8 +5,13 @@ import { Toaster } from "@/components/ui/sonner";
 
 import heroCookies from "@/assets/hero-cookies.jpg";
 import aboutMaker from "@/assets/about-maker.jpg";
-import galleryWedding1 from "@/assets/gallery-wedding-1.jpg";
-import galleryWedding2 from "@/assets/gallery-wedding-2.jpg";
+import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
+import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
+import weddingMonogramB from "@/assets/gallery/wedding-monogram-b-love-floral.jpg.asset.json";
+import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg.asset.json";
+import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg.asset.json";
+import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg.asset.json";
+import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.json";
 import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
@@ -52,7 +57,7 @@ type GalleryItem = {
 
 // Real photos from Tailored Sweet Treats. More will be added as they come in.
 const GALLERY: GalleryItem[] = [
-  { src: galleryWedding1, alt: "Ivory and gold leaf sugar cookies for a Virginia wedding", caption: "Wedding Suite No. 04", category: "wedding" },
+  { src: weddingMonogramB.url, alt: "Ivory sugar cookies with floral hexagon monograms, wedding date 6.28.24, gold rings, and 'love' script for a Virginia wedding", caption: "Floral Monogram Wedding — 6.28.24", category: "wedding" },
   { src: birthdayCarsHudson.url, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
   { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
   { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
@@ -71,7 +76,12 @@ const GALLERY: GalleryItem[] = [
   { src: birthdayHappyDudeJoe.url, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
   { src: birthdayPumpkinsAj.url, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
   { src: galleryHoliday, alt: "Silver and white snowflake holiday sugar cookies", caption: "Winter Collection", category: "holiday" },
-  { src: galleryWedding2, alt: "Monogram wedding sugar cookies with gold calligraphy", caption: "Monogram Series", category: "wedding" },
+  { src: weddingBrideToBeLove.url, alt: "Pastel bridal shower sugar cookies with 'Bride To Be', 'love' script, diamond rings, and champagne bottles", caption: "Bride To Be — Pastel Bridal Shower", category: "wedding" },
+  { src: weddingCheersBeers.url, alt: "'Cheers & Beers' engagement sugar cookies with beer bottles est. 2024 and blue 'Just Married' cars for E+C", caption: "Cheers & Beers — E+C 2024", category: "wedding" },
+  { src: weddingGlTq.url, alt: "Elegant ivory and gold GL|TQ monogram wedding sugar cookies with champagne bottles, diamond rings, and 03.24.24 date", caption: "GL & TQ — 03.24.24", category: "wedding" },
+  { src: weddingBrightLove.url, alt: "Bright pink, yellow, and orange 'love' wedding sugar cookies with buttercream flowers, diamond rings, and tiered cakes", caption: "Bright Love — Buttercream Bridal", category: "wedding" },
+  { src: weddingButtercreamFlowers.url, alt: "Sixteen round sugar cookies topped with piped buttercream flowers in ivory, blush, and chocolate tones with pearl centers", caption: "Buttercream Flower Bar", category: "wedding" },
+  { src: weddingDdLove.url, alt: "Blush and ivory 'D|D' monogram wedding sugar cookies with 'love' hearts, diamond rings, and 06.03.23 date", caption: "D & D — 06.03.23", category: "wedding" },
 ];
 
 const PAGE_SIZE = 12;
