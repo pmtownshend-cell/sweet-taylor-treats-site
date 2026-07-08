@@ -12,7 +12,9 @@ import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg.asset.json
 import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg.asset.json";
 import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg.asset.json";
 import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.json";
-import galleryCorporate from "@/assets/gallery-corporate.jpg";
+import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg.asset.json";
+import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg.asset.json";
+import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg.asset.json";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
 import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
@@ -52,14 +54,14 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday" | "occasion";
+type Category = "all" | "wedding" | "birthday" | "baby" | "college" | "holiday" | "occasion";
 
 const CATEGORIES: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
   { id: "wedding", label: "Weddings" },
   { id: "birthday", label: "Birthdays" },
   { id: "baby", label: "Baby Showers" },
-  { id: "corporate", label: "Corporate" },
+  { id: "college", label: "College & Grad" },
   { id: "holiday", label: "Holidays" },
   { id: "occasion", label: "Occasions" },
 ];
@@ -78,7 +80,7 @@ const GALLERY: GalleryItem[] = [
   { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
   { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
   { src: babyOhBoyBlue.url, alt: "Blue and white 'Oh Boy' baby shower sugar cookies with baby bottles, blocks, and gift shapes", caption: "Oh Boy — Blue & White", category: "baby" },
-  { src: galleryCorporate, alt: "Custom logo sugar cookies for a DMV corporate event", caption: "Corporate Brand Set", category: "corporate" },
+  { src: collegeMaryland.url, alt: "University of Maryland graduation sugar cookies with Testudo mascot, red M, black cap and gown, and 'Alyssa — University of Maryland' plaques", caption: "Alyssa — Maryland Grad", category: "college" },
   { src: birthdayUnderTheSeaEmmy.url, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
   { src: babyAhoyNautical.url, alt: "Nautical 'Ahoy It's a Boy' baby shower sugar cookies with sailboats, anchors, and sailor onesies", caption: "Ahoy — It's a Boy", category: "baby" },
   { src: birthdayDinosaursRawr.url, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
@@ -112,6 +114,8 @@ const GALLERY: GalleryItem[] = [
   { src: occasionLemonsTiles.url, alt: "Amalfi inspired sugar cookies with yellow lemons, lemon slices, and blue Mediterranean tile squares", caption: "Amalfi Lemons & Tiles", category: "occasion" },
   { src: occasionFootball.url, alt: "Game day sugar cookies with a brown football, blue 'Go Team' helmet, and X's and O's playbook", caption: "Game Day — Go Team", category: "occasion" },
   { src: occasionCookout.url, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
+  { src: collegeJmu.url, alt: "James Madison University JMU sugar cookies in the shape of the state of Virginia with royal blue icing and gold JMU lettering", caption: "JMU — Virginia Bound", category: "college" },
+  { src: collegeAlabama.url, alt: "Alabama 'Bama Bound Class of 2024' graduation sugar cookies with crimson elephant, script A, grad caps, and shield", caption: "Bama Bound — Class of 2024", category: "college" },
 ];
 
 const PAGE_SIZE = 12;
@@ -341,7 +345,7 @@ function About() {
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
           We only do sugar cookies, and we love the tiny details — the perfect shade of icing, the little florals,
-          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a corporate launch,
+          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a graduation,
           we're here to make your treats feel personal.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
@@ -362,7 +366,7 @@ const EVENT_TYPES = [
   "Wedding",
   "Baby Shower",
   "Holiday",
-  "Corporate",
+  "College / Graduation",
   "Other",
 ] as const;
 
