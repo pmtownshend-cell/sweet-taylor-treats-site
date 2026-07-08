@@ -114,6 +114,8 @@ const GALLERY: GalleryItem[] = [
   { src: occasionLemonsTiles.url, alt: "Amalfi inspired sugar cookies with yellow lemons, lemon slices, and blue Mediterranean tile squares", caption: "Amalfi Lemons & Tiles", category: "occasion" },
   { src: occasionFootball.url, alt: "Game day sugar cookies with a brown football, blue 'Go Team' helmet, and X's and O's playbook", caption: "Game Day — Go Team", category: "occasion" },
   { src: occasionCookout.url, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
+  { src: collegeJmu.url, alt: "James Madison University JMU sugar cookies in the shape of the state of Virginia with royal blue icing and gold JMU lettering", caption: "JMU — Virginia Bound", category: "college" },
+  { src: collegeAlabama.url, alt: "Alabama 'Bama Bound Class of 2024' graduation sugar cookies with crimson elephant, script A, grad caps, and shield", caption: "Bama Bound — Class of 2024", category: "college" },
 ];
 
 const PAGE_SIZE = 12;
