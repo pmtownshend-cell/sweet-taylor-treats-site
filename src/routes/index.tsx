@@ -3,7 +3,10 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
-import heroCookies from "@/assets/hero-cookies-triptych.jpg.asset.json";
+import cookieFootball from "@/assets/cookie-football.png.asset.json";
+import cookieCookout from "@/assets/cookie-cookout.png.asset.json";
+import cookieBaby from "@/assets/cookie-baby.png.asset.json";
+import cookieApple from "@/assets/cookie-apple.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
@@ -161,26 +164,45 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
-      <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Custom cookies · Made in Loudoun County, VA
-      </span>
-      <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-        Hand-decorated cookies
-        <br />
-        for <span className="italic">every</span> celebration.
-      </h1>
-      <p className="animate-reveal mb-12 max-w-xl text-balance text-sm leading-relaxed text-muted-foreground [animation-delay:150ms] md:text-base">
-        Custom-designed, hand-piped cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
-      </p>
-      <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
-        <img
-          src={heroCookies.url}
-          alt="Hand-decorated custom cookies on a warm neutral surface"
-          width={1600}
-          height={900}
-          className="aspect-[21/9] w-full rounded-sm object-cover shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
-        />
+    <section id="top" className="relative overflow-hidden px-6 pt-20 pb-24 md:pt-28 md:pb-32">
+      {/* Floating cookies */}
+      <img
+        src={cookieFootball.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute left-[-3%] top-[8%] w-40 -rotate-12 opacity-95 md:left-[4%] md:top-[6%] md:w-64"
+      />
+      <img
+        src={cookieCookout.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-[-4%] top-[4%] w-48 rotate-6 opacity-95 md:right-[5%] md:top-[10%] md:w-72"
+      />
+      <img
+        src={cookieBaby.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute left-[6%] bottom-[4%] w-28 -rotate-6 opacity-95 md:left-[12%] md:bottom-[8%] md:w-40"
+      />
+      <img
+        src={cookieApple.url}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-[4%] bottom-[6%] w-24 rotate-12 opacity-95 md:right-[14%] md:bottom-[10%] md:w-36"
+      />
+
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
+        <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+          Custom cookies · Made in Loudoun County, VA
+        </span>
+        <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
+          Hand-decorated cookies
+          <br />
+          for <span className="italic">every</span> celebration.
+        </h1>
+        <p className="animate-reveal max-w-xl text-balance text-sm leading-relaxed text-muted-foreground [animation-delay:150ms] md:text-base">
+          Custom-designed, hand-piped cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
+        </p>
       </div>
     </section>
   );
