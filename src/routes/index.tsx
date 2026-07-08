@@ -163,7 +163,7 @@ function Hero() {
   return (
     <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
       <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Custom sugar cookies · Made in the DMV · Ships nationwide
+        Custom cookies · Made in the DMV · Ships nationwide
       </span>
       <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
         Hand-decorated cookies
