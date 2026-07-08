@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroCookies from "@/assets/hero-cookies.jpg";
+import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/about-maker.jpg";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
 import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
@@ -142,8 +143,9 @@ function Nav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="font-display text-2xl italic tracking-tight">
-          Tailored Sweet Treats
+        <a href="#top" className="flex items-center gap-3">
+          <img src={logo.url} alt="Tailored Sweet Treats logo" className="h-12 w-12 rounded-full" />
+          <span className="font-display text-2xl italic tracking-tight">Tailored Sweet Treats</span>
         </a>
         <div className="hidden gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-muted md:flex">
           <a href="#gallery" className="transition-colors hover:text-foreground">See the cookies</a>
