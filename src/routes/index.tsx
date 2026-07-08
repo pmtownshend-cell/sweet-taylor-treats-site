@@ -12,7 +12,9 @@ import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg.asset.json
 import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg.asset.json";
 import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg.asset.json";
 import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.json";
-import galleryCorporate from "@/assets/gallery-corporate.jpg";
+import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg.asset.json";
+import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg.asset.json";
+import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg.asset.json";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
 import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
