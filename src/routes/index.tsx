@@ -345,7 +345,7 @@ function About() {
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
           We only do sugar cookies, and we love the tiny details — the perfect shade of icing, the little florals,
-          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a corporate launch,
+          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a graduation,
           we're here to make your treats feel personal.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
