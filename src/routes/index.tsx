@@ -167,13 +167,15 @@ function Hero() {
   // Five cookies only, scattered big across the edges and behind the text.
   const cookies = [
     // left side
-    { src: cookieCookout.url, className: "left-[-10%] top-[-8%] w-40 -rotate-12 md:left-[-18%] md:top-[-10%] md:w-[30rem]" },
-    { src: cookieFootball.url, className: "left-[-4%] top-[26%] w-24 rotate-6 md:left-[4%] md:top-[24%] md:w-56" },
-    { src: cookieBaby.url, className: "left-[-8%] bottom-[6%] w-32 rotate-12 md:left-[-16%] md:bottom-[4%] md:w-[26rem]" },
+    { src: cookieCookout.url, className: "left-[-14%] top-[-10%] w-44 -rotate-12 md:left-[-22%] md:top-[-12%] md:w-[32rem]" },
+    { src: cookieFootball.url, className: "left-[-6%] top-[22%] w-28 rotate-6 md:left-[2%] md:top-[20%] md:w-64" },
+    { src: cookieBaby.url, className: "left-[-10%] bottom-[8%] w-36 rotate-12 md:left-[-18%] md:bottom-[6%] md:w-[28rem]" },
+    { src: cookieMasters.url, className: "left-[2%] bottom-[-6%] w-20 -rotate-6 md:left-[10%] md:bottom-[-8%] md:w-44" },
     // right side
-    { src: cookieMasters.url, className: "right-[-10%] top-[-8%] w-40 rotate-12 md:right-[-18%] md:top-[-10%] md:w-[30rem]" },
-    { src: cookieApple.url, className: "right-[-4%] top-[26%] w-24 -rotate-6 md:right-[4%] md:top-[24%] md:w-56" },
-    { src: cookieCookout.url, className: "right-[-8%] bottom-[6%] w-32 -rotate-12 md:right-[-16%] md:bottom-[4%] md:w-[26rem]" },
+    { src: cookieMasters.url, className: "right-[-14%] top-[-10%] w-44 rotate-12 md:right-[-22%] md:top-[-12%] md:w-[32rem]" },
+    { src: cookieApple.url, className: "right-[-6%] top-[22%] w-28 -rotate-6 md:right-[2%] md:top-[20%] md:w-64" },
+    { src: cookieCookout.url, className: "right-[-10%] bottom-[8%] w-36 -rotate-12 md:right-[-18%] md:bottom-[6%] md:w-[28rem]" },
+    { src: cookieBaby.url, className: "right-[2%] bottom-[-6%] w-20 rotate-6 md:right-[10%] md:bottom-[-8%] md:w-44" },
   ];
 
   return (
