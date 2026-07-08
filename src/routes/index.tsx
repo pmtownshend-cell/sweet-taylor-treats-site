@@ -15,7 +15,9 @@ import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.j
 import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg.asset.json";
 import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg.asset.json";
 import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg.asset.json";
-import galleryHoliday from "@/assets/gallery-holiday.jpg";
+import holidayChristmas from "@/assets/gallery/holiday-christmas-classic.jpg.asset.json";
+import holidayValentines from "@/assets/gallery/holiday-valentines-love-letters.jpg.asset.json";
+import holidayHalloween from "@/assets/gallery/holiday-halloween-pink-ghosts.jpg.asset.json";
 
 import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
 import birthday90thEunice from "@/assets/gallery/birthday-90th-eunice.jpg.asset.json";
