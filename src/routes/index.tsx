@@ -170,25 +170,25 @@ function Hero() {
         src={cookieFootball.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute left-[-3%] top-[8%] w-40 -rotate-12 opacity-95 md:left-[4%] md:top-[6%] md:w-64"
+        className="pointer-events-none absolute left-[-6%] top-[4%] w-56 -rotate-12 md:left-[2%] md:top-[4%] md:w-[22rem]"
       />
       <img
         src={cookieCookout.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute right-[-4%] top-[4%] w-48 rotate-6 opacity-95 md:right-[5%] md:top-[10%] md:w-72"
+        className="pointer-events-none absolute right-[-6%] top-[2%] w-64 rotate-6 md:right-[2%] md:top-[6%] md:w-[24rem]"
       />
       <img
         src={cookieBaby.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute left-[6%] bottom-[4%] w-28 -rotate-6 opacity-95 md:left-[12%] md:bottom-[8%] md:w-40"
+        className="pointer-events-none absolute left-[2%] bottom-[2%] w-40 -rotate-6 md:left-[8%] md:bottom-[4%] md:w-64"
       />
       <img
         src={cookieApple.url}
         alt=""
         aria-hidden
-        className="pointer-events-none absolute right-[4%] bottom-[6%] w-24 rotate-12 opacity-95 md:right-[14%] md:bottom-[10%] md:w-36"
+        className="pointer-events-none absolute right-[2%] bottom-[4%] w-36 rotate-12 md:right-[10%] md:bottom-[6%] md:w-60"
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
