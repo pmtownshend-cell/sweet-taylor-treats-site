@@ -7,11 +7,19 @@ import heroCookies from "@/assets/hero-cookies.jpg";
 import aboutMaker from "@/assets/about-maker.jpg";
 import galleryWedding1 from "@/assets/gallery-wedding-1.jpg";
 import galleryWedding2 from "@/assets/gallery-wedding-2.jpg";
-import galleryBirthday1 from "@/assets/gallery-birthday-1.jpg";
-import galleryBirthday2 from "@/assets/gallery-birthday-2.jpg";
 import galleryBaby from "@/assets/gallery-baby.jpg";
 import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
+
+import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
+import birthday90thEunice from "@/assets/gallery/birthday-90th-eunice.jpg.asset.json";
+import birthdayDinosaursRawr from "@/assets/gallery/birthday-dinosaurs-rawr.jpg.asset.json";
+import birthdayDonutsSophia from "@/assets/gallery/birthday-donuts-sophia.jpg.asset.json";
+import birthdayUnderTheSeaEmmy from "@/assets/gallery/birthday-under-the-sea-emmy.jpg.asset.json";
+import birthdaySpaceStars from "@/assets/gallery/birthday-space-reach-four-stars.jpg.asset.json";
+import birthdayHappyDudeJoe from "@/assets/gallery/birthday-happy-dude-joe.jpg.asset.json";
+import birthdayBatmanNoah from "@/assets/gallery/birthday-batman-noah.jpg.asset.json";
+import birthdayPumpkinsAj from "@/assets/gallery/birthday-pumpkins-aj-one.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
