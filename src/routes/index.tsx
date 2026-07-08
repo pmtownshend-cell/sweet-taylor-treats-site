@@ -54,14 +54,14 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday" | "occasion";
+type Category = "all" | "wedding" | "birthday" | "baby" | "college" | "holiday" | "occasion";
 
 const CATEGORIES: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
   { id: "wedding", label: "Weddings" },
   { id: "birthday", label: "Birthdays" },
   { id: "baby", label: "Baby Showers" },
-  { id: "corporate", label: "Corporate" },
+  { id: "college", label: "College & Grad" },
   { id: "holiday", label: "Holidays" },
   { id: "occasion", label: "Occasions" },
 ];
