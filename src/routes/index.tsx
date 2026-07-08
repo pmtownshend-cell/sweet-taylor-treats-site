@@ -164,22 +164,16 @@ function Nav() {
 }
 
 function Hero() {
-  // Denser cookie collage on both sides — same assets, more positions, bigger sizes.
+  // Five cookies only, scattered big across the edges and behind the text.
   const cookies = [
     // left side
-    { src: cookieCookout.url, className: "left-[-6%] top-[-4%] w-32 -rotate-12 md:left-[-14%] md:top-[-6%] md:w-[28rem]" },
-    { src: cookieBaby.url, className: "left-[-2%] top-[8%] w-20 rotate-12 md:left-[8%] md:top-[8%] md:w-48" },
-    { src: cookieApple.url, className: "left-[-4%] top-[34%] w-28 rotate-6 md:left-[-12%] md:top-[34%] md:w-[24rem]" },
-    { src: cookieFootball.url, className: "left-0 top-[48%] w-20 -rotate-6 md:left-[10%] md:top-[48%] md:w-40" },
-    { src: cookieFive.url, className: "left-[-6%] bottom-[-4%] w-32 rotate-12 md:left-[-14%] md:bottom-[-6%] md:w-[28rem]" },
-    { src: cookieMasters.url, className: "left-[-2%] bottom-[12%] w-20 rotate-6 md:left-[8%] md:bottom-[12%] md:w-48" },
+    { src: cookieCookout.url, className: "left-[-10%] top-[-8%] w-40 -rotate-12 md:left-[-18%] md:top-[-10%] md:w-[30rem]" },
+    { src: cookieFootball.url, className: "left-[-4%] top-[26%] w-24 rotate-6 md:left-[4%] md:top-[24%] md:w-56" },
+    { src: cookieBaby.url, className: "left-[-8%] bottom-[6%] w-32 rotate-12 md:left-[-16%] md:bottom-[4%] md:w-[26rem]" },
     // right side
-    { src: cookieApple.url, className: "right-[-6%] top-[-4%] w-32 rotate-12 md:right-[-14%] md:top-[-6%] md:w-[28rem]" },
-    { src: cookieMasters.url, className: "right-[-2%] top-[8%] w-20 -rotate-12 md:right-[8%] md:top-[8%] md:w-48" },
-    { src: cookieBaby.url, className: "right-[-4%] top-[34%] w-28 -rotate-6 md:right-[-12%] md:top-[34%] md:w-[24rem]" },
-    { src: cookieJustMarried.url, className: "right-0 top-[48%] w-20 rotate-6 md:right-[10%] md:top-[48%] md:w-40" },
-    { src: cookieFootball.url, className: "right-[-6%] bottom-[-4%] w-32 -rotate-12 md:right-[-14%] md:bottom-[-6%] md:w-[28rem]" },
-    { src: cookieCookout.url, className: "right-[-2%] bottom-[12%] w-20 rotate-12 md:right-[8%] md:bottom-[12%] md:w-48" },
+    { src: cookieMasters.url, className: "right-[-10%] top-[-8%] w-40 rotate-12 md:right-[-18%] md:top-[-10%] md:w-[30rem]" },
+    { src: cookieApple.url, className: "right-[-4%] top-[26%] w-24 -rotate-6 md:right-[4%] md:top-[24%] md:w-56" },
+    { src: cookieCookout.url, className: "right-[-8%] bottom-[6%] w-32 -rotate-12 md:right-[-16%] md:bottom-[4%] md:w-[26rem]" },
   ];
 
   return (
