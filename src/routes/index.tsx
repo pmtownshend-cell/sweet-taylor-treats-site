@@ -7,6 +7,15 @@ import cookieFootball from "@/assets/cookie-football.png.asset.json";
 import cookieCookout from "@/assets/cookie-cookout.png.asset.json";
 import cookieBaby from "@/assets/cookie-baby.png.asset.json";
 import cookieApple from "@/assets/cookie-apple.png.asset.json";
+import cookieAhoy from "@/assets/cookie-ahoy.png.asset.json";
+import cookieAlice from "@/assets/cookie-alice.png.asset.json";
+import cookieCowboy from "@/assets/cookie-cowboy.png.asset.json";
+import cookieDress from "@/assets/cookie-dress.png.asset.json";
+import cookieFive from "@/assets/cookie-five.png.asset.json";
+import cookieGrad from "@/assets/cookie-grad.png.asset.json";
+import cookieJustMarried from "@/assets/cookie-justmarried.png.asset.json";
+import cookieMasters from "@/assets/cookie-masters.png.asset.json";
+import cookieTree from "@/assets/cookie-tree.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
@@ -163,33 +172,35 @@ function Nav() {
 }
 
 function Hero() {
+  const floaters = [
+    // big statement pieces — some hang off edges
+    { src: cookieCookout.url, className: "left-[-8%] top-[-4%] w-56 -rotate-12 md:left-[-4%] md:top-[-3%] md:w-[26rem]" },
+    { src: cookieApple.url, className: "right-[-6%] top-[2%] w-44 rotate-12 md:right-[-3%] md:top-[4%] md:w-72" },
+    { src: cookieFootball.url, className: "left-[-4%] top-[42%] w-48 -rotate-6 md:left-[1%] md:top-[46%] md:w-80" },
+    { src: cookieBaby.url, className: "left-[6%] bottom-[-6%] w-40 -rotate-12 md:left-[10%] md:bottom-[-4%] md:w-64" },
+    { src: cookieMasters.url, className: "right-[-4%] top-[46%] w-36 rotate-6 md:right-[2%] md:top-[48%] md:w-60" },
+    { src: cookieAlice.url, className: "right-[4%] bottom-[-4%] w-40 -rotate-6 md:right-[10%] md:bottom-[-3%] md:w-64" },
+    // smaller accents scattered around headline
+    { src: cookieCowboy.url, className: "left-[38%] top-[2%] w-16 rotate-6 md:left-[36%] md:top-[4%] md:w-24" },
+    { src: cookieGrad.url, className: "left-[24%] top-[26%] w-16 -rotate-12 md:left-[26%] md:top-[24%] md:w-24" },
+    { src: cookieDress.url, className: "right-[30%] top-[24%] w-14 rotate-6 md:right-[28%] md:top-[22%] md:w-20" },
+    { src: cookieAhoy.url, className: "right-[22%] top-[8%] w-14 md:right-[24%] md:top-[10%] md:w-20" },
+    { src: cookieJustMarried.url, className: "left-[32%] bottom-[10%] w-16 -rotate-6 md:left-[34%] md:bottom-[14%] md:w-24" },
+    { src: cookieFive.url, className: "left-[46%] bottom-[24%] w-10 rotate-6 md:left-[48%] md:bottom-[26%] md:w-16" },
+    { src: cookieTree.url, className: "right-[36%] bottom-[8%] w-14 -rotate-6 md:right-[38%] md:bottom-[12%] md:w-20" },
+  ];
+
   return (
-    <section id="top" className="relative overflow-hidden px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-      {/* Floating cookies */}
-      <img
-        src={cookieFootball.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute left-[-6%] top-[4%] w-56 -rotate-12 md:left-[2%] md:top-[4%] md:w-[22rem]"
-      />
-      <img
-        src={cookieCookout.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute right-[-6%] top-[2%] w-64 rotate-6 md:right-[2%] md:top-[6%] md:w-[24rem]"
-      />
-      <img
-        src={cookieBaby.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute left-[2%] bottom-[2%] w-40 -rotate-6 md:left-[8%] md:bottom-[4%] md:w-64"
-      />
-      <img
-        src={cookieApple.url}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute right-[2%] bottom-[4%] w-36 rotate-12 md:right-[10%] md:bottom-[6%] md:w-60"
-      />
+    <section id="top" className="relative overflow-hidden px-6 pt-20 pb-32 md:pt-28 md:pb-40 min-h-[36rem] md:min-h-[46rem]">
+      {floaters.map((f, i) => (
+        <img
+          key={i}
+          src={f.src}
+          alt=""
+          aria-hidden
+          className={`pointer-events-none absolute drop-shadow-sm ${f.className}`}
+        />
+      ))}
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
         <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
