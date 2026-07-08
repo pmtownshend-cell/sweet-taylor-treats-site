@@ -7,7 +7,6 @@ import heroCookies from "@/assets/hero-cookies.jpg";
 import aboutMaker from "@/assets/about-maker.jpg";
 import galleryWedding1 from "@/assets/gallery-wedding-1.jpg";
 import galleryWedding2 from "@/assets/gallery-wedding-2.jpg";
-import galleryBaby from "@/assets/gallery-baby.jpg";
 import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
@@ -20,6 +19,14 @@ import birthdaySpaceStars from "@/assets/gallery/birthday-space-reach-four-stars
 import birthdayHappyDudeJoe from "@/assets/gallery/birthday-happy-dude-joe.jpg.asset.json";
 import birthdayBatmanNoah from "@/assets/gallery/birthday-batman-noah.jpg.asset.json";
 import birthdayPumpkinsAj from "@/assets/gallery/birthday-pumpkins-aj-one.jpg.asset.json";
+
+import babyOhBoyBlue from "@/assets/gallery/baby-oh-boy-blue.jpg.asset.json";
+import babyLittleCowboy from "@/assets/gallery/baby-little-cowboy.jpg.asset.json";
+import babyBurgundyHearts from "@/assets/gallery/baby-burgundy-pink-hearts.jpg.asset.json";
+import babyBearlyWait from "@/assets/gallery/baby-bearly-wait.jpg.asset.json";
+import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg.asset.json";
+import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg.asset.json";
+import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
