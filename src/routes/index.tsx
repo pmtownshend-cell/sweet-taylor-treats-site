@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 import heroCookies from "@/assets/hero-cookies.jpg";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
-import aboutMaker from "@/assets/about-maker.jpg";
+import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
 import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
 import weddingMonogramB from "@/assets/gallery/wedding-monogram-b-love-floral.jpg.asset.json";
@@ -330,29 +330,30 @@ function About() {
     <section id="about" className="mx-auto grid max-w-6xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
       <div className="order-2 md:order-1">
         <img
-          src={aboutMaker}
-          alt="Baker's hands piping royal icing onto a custom sugar cookie in a home kitchen"
+          src={aboutMaker.url}
+          alt="Taylor with her family — husband, two little ones, and their goldendoodle"
           width={800}
           height={1000}
           loading="lazy"
-          className="aspect-[3/4] w-full rounded-sm object-cover outline outline-1 -outline-offset-1 outline-black/5"
+          className="aspect-[4/5] w-full rounded-xl object-cover shadow-[0_20px_60px_-20px_rgba(80,70,140,0.35)] outline outline-1 -outline-offset-1 outline-black/5"
         />
       </div>
       <div className="order-1 md:order-2">
         <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
           Meet the baker
         </span>
-        <h2 className="mb-8 font-display text-4xl italic leading-tight md:text-5xl">
-          Baked with love — and a lot of piping bags.
+        <h2 className="mb-8 font-display text-5xl leading-[1.05] md:text-6xl">
+          Hi, I'm Taylor.
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground">
-          Tailored Sweet Treats is a home-based sugar cookie business in Northern Virginia, serving the entire DMV.
-          Every order is baked fresh, hand decorated, and made specially for you — no two batches are quite the same.
+          When I'm not chasing after my two little ones (and one very fluffy goldendoodle), you'll find me
+          elbow-deep in flour and royal icing. Tailored Sweet Treats started as a sweet way to channel my
+          passion for baking — a little quiet time between snack breaks, nap schedules, and everything in between.
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
-          We only do sugar cookies, and we love the tiny details — the perfect shade of icing, the little florals,
-          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a graduation,
-          we're here to make your treats feel personal.
+          Every cookie is baked and hand-decorated from my home kitchen in Northern Virginia, made with the same
+          love I pour into my family. I only do sugar cookies, and I love the tiny details — the perfect shade
+          of icing, the little florals, the monogram that matches your invitation.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
           <div className="grid size-12 place-items-center rounded-full bg-accent/10">
