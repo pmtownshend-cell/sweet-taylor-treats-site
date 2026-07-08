@@ -172,11 +172,11 @@ function Hero() {
       </h1>
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
-          src={cookieCookout.url}
-          alt="Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles"
-          width={1024}
-          height={1024}
-          className="aspect-square w-full rounded-sm object-contain shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
+          src={heroCookies.url}
+          alt="Hand-decorated sugar cookies for every celebration"
+          width={1600}
+          height={900}
+          className="aspect-[16/9] w-full rounded-sm object-contain shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
         />
       </div>
     </section>
