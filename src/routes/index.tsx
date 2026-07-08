@@ -43,15 +43,22 @@ type GalleryItem = {
   category: Exclude<Category, "all">;
 };
 
-// Placeholder set — will be replaced with real photos as they come in.
+// Real photos from Tailored Sweet Treats. More will be added as they come in.
 const GALLERY: GalleryItem[] = [
   { src: galleryWedding1, alt: "Ivory and gold leaf sugar cookies for a Virginia wedding", caption: "Wedding Suite No. 04", category: "wedding" },
+  { src: birthdayCarsHudson.url, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
+  { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
   { src: galleryCorporate, alt: "Custom logo sugar cookies for a DMV corporate event", caption: "Corporate Brand Set", category: "corporate" },
+  { src: birthdayUnderTheSeaEmmy.url, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
+  { src: birthdayDinosaursRawr.url, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
   { src: galleryBaby, alt: "Pastel baby shower sugar cookies shaped like onesies and rattles", caption: "Spring Celebration", category: "baby" },
-  { src: galleryBirthday1, alt: "Pastel birthday number sugar cookies with sprinkles", caption: "Birthday Numerals", category: "birthday" },
+  { src: birthdaySpaceStars.url, alt: "Pastel space themed sugar cookies with planets, rockets, and 'Reach Four the Stars' for a 4th birthday", caption: "Reach Four the Stars", category: "birthday" },
+  { src: birthdayBatmanNoah.url, alt: "Batman and Robin superhero sugar cookies personalized with 'Noah' for a 4th birthday", caption: "Noah's Batman & Robin", category: "birthday" },
+  { src: birthday90thEunice.url, alt: "Elegant rose gold '90' sugar cookies with white piped roses for Eunice's 90th birthday", caption: "Eunice's 90th", category: "birthday" },
+  { src: birthdayHappyDudeJoe.url, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
+  { src: birthdayPumpkinsAj.url, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
   { src: galleryHoliday, alt: "Silver and white snowflake holiday sugar cookies", caption: "Winter Collection", category: "holiday" },
   { src: galleryWedding2, alt: "Monogram wedding sugar cookies with gold calligraphy", caption: "Monogram Series", category: "wedding" },
-  { src: galleryBirthday2, alt: "Playful animal-shaped birthday sugar cookies", caption: "Little Menagerie", category: "birthday" },
 ];
 
 const PAGE_SIZE = 12;
