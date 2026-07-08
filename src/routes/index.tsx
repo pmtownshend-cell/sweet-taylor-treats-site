@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
-import heroCookies from "@/assets/hero-cookies.jpg";
+import heroCookies from "@/assets/hero-cookies-triptych.jpg.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
@@ -175,7 +175,7 @@ function Hero() {
       </p>
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
-          src={heroCookies}
+          src={heroCookies.url}
           alt="Hand-decorated custom cookies on a warm neutral surface"
           width={1600}
           height={900}
