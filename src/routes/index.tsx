@@ -33,11 +33,22 @@ import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg.asset.json";
 import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg.asset.json";
 import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg.asset.json";
 
+import occasionMastersGolf from "@/assets/gallery/occasion-masters-golf-azaleas.jpg.asset.json";
+import occasionMastersJacket from "@/assets/gallery/occasion-masters-green-jacket-usa.jpg.asset.json";
+import occasionMonogramG from "@/assets/gallery/occasion-monogram-g-white.jpg.asset.json";
+import occasionUnicorns from "@/assets/gallery/occasion-unicorns-rainbows.jpg.asset.json";
+import occasionToughCookie from "@/assets/gallery/occasion-tough-cookie-ring-that-bell.jpg.asset.json";
+import occasionMarylandCrabs from "@/assets/gallery/occasion-maryland-crabs-sailboats.jpg.asset.json";
+import occasionPinkRibbon from "@/assets/gallery/occasion-pink-ribbon-hearts.jpg.asset.json";
+import occasionTeddyBears from "@/assets/gallery/occasion-teddy-bears.jpg.asset.json";
+import occasionShootingStars from "@/assets/gallery/occasion-shooting-stars.jpg.asset.json";
+import occasionBalletSlippers from "@/assets/gallery/occasion-ballet-slippers.jpg.asset.json";
+
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
-type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday";
+type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday" | "occasion";
 
 const CATEGORIES: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
@@ -46,6 +57,7 @@ const CATEGORIES: { id: Category; label: string }[] = [
   { id: "baby", label: "Baby Showers" },
   { id: "corporate", label: "Corporate" },
   { id: "holiday", label: "Holidays" },
+  { id: "occasion", label: "Occasions" },
 ];
 
 type GalleryItem = {
