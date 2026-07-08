@@ -43,6 +43,10 @@ import occasionPinkRibbon from "@/assets/gallery/occasion-pink-ribbon-hearts.jpg
 import occasionTeddyBears from "@/assets/gallery/occasion-teddy-bears.jpg.asset.json";
 import occasionShootingStars from "@/assets/gallery/occasion-shooting-stars.jpg.asset.json";
 import occasionBalletSlippers from "@/assets/gallery/occasion-ballet-slippers.jpg.asset.json";
+import occasionTeacherApple from "@/assets/gallery/occasion-teacher-apple-aplus.jpg.asset.json";
+import occasionLemonsTiles from "@/assets/gallery/occasion-lemons-blue-tiles.jpg.asset.json";
+import occasionFootball from "@/assets/gallery/occasion-football-go-team.jpg.asset.json";
+import occasionCookout from "@/assets/gallery/occasion-cookout-burgers-watermelon.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
