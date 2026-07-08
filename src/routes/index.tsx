@@ -5,8 +5,13 @@ import { Toaster } from "@/components/ui/sonner";
 
 import heroCookies from "@/assets/hero-cookies.jpg";
 import aboutMaker from "@/assets/about-maker.jpg";
-import galleryWedding1 from "@/assets/gallery-wedding-1.jpg";
-import galleryWedding2 from "@/assets/gallery-wedding-2.jpg";
+import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
+import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
+import weddingMonogramB from "@/assets/gallery/wedding-monogram-b-love-floral.jpg.asset.json";
+import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg.asset.json";
+import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg.asset.json";
+import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg.asset.json";
+import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.json";
 import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
