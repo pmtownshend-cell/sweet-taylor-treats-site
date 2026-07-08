@@ -80,7 +80,7 @@ const GALLERY: GalleryItem[] = [
   { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
   { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
   { src: babyOhBoyBlue.url, alt: "Blue and white 'Oh Boy' baby shower sugar cookies with baby bottles, blocks, and gift shapes", caption: "Oh Boy — Blue & White", category: "baby" },
-  { src: galleryCorporate, alt: "Custom logo sugar cookies for a DMV corporate event", caption: "Corporate Brand Set", category: "corporate" },
+  { src: collegeMaryland.url, alt: "University of Maryland graduation sugar cookies with Testudo mascot, red M, black cap and gown, and 'Alyssa — University of Maryland' plaques", caption: "Alyssa — Maryland Grad", category: "college" },
   { src: birthdayUnderTheSeaEmmy.url, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
   { src: babyAhoyNautical.url, alt: "Nautical 'Ahoy It's a Boy' baby shower sugar cookies with sailboats, anchors, and sailor onesies", caption: "Ahoy — It's a Boy", category: "baby" },
   { src: birthdayDinosaursRawr.url, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
