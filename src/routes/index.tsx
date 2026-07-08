@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
-import heroCookies from "@/assets/hero-cookies.jpg";
+import heroCookies from "@/assets/hero-cookies-triptych.jpg.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
