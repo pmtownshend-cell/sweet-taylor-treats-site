@@ -450,7 +450,7 @@ function QuoteForm() {
             <select required name="fulfillment" defaultValue="" className={inputCls + " appearance-none"}>
               <option value="" disabled className="text-stone-900">Choose one…</option>
               <option value="pickup" className="text-stone-900">Pickup (20175)</option>
-              <option value="delivery" className="text-stone-900">Delivery (within 20175)</option>
+              <option value="delivery" className="text-stone-900">Delivery — fee based on location</option>
             </select>
           </Field>
           <Field label="Inspiration photos (optional)" className={labelCls}>
