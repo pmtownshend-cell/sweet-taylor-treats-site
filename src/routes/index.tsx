@@ -15,7 +15,9 @@ import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.j
 import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg.asset.json";
 import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg.asset.json";
 import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg.asset.json";
-import galleryHoliday from "@/assets/gallery-holiday.jpg";
+import holidayChristmas from "@/assets/gallery/holiday-christmas-classic.jpg.asset.json";
+import holidayValentines from "@/assets/gallery/holiday-valentines-love-letters.jpg.asset.json";
+import holidayHalloween from "@/assets/gallery/holiday-halloween-pink-ghosts.jpg.asset.json";
 
 import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
 import birthday90thEunice from "@/assets/gallery/birthday-90th-eunice.jpg.asset.json";
@@ -93,7 +95,9 @@ const GALLERY: GalleryItem[] = [
   { src: babyTeddyBearGender.url, alt: "Gender reveal sugar cookies with a teddy bear, blue and pink onesies and bottles", caption: "Teddy Bear Gender Reveal", category: "baby" },
   { src: birthdayHappyDudeJoe.url, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
   { src: birthdayPumpkinsAj.url, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
-  { src: galleryHoliday, alt: "Silver and white snowflake holiday sugar cookies", caption: "Winter Collection", category: "holiday" },
+  { src: holidayChristmas.url, alt: "Classic Christmas sugar cookies with gingerbread man, ugly sweater, gift boxes, Santa, Christmas tree, gingerbread house, and snowflake", caption: "Classic Christmas Set", category: "holiday" },
+  { src: holidayValentines.url, alt: "Pink and red Valentine's Day sugar cookies with hearts, 'LOVE', love letters, and personalized name banners", caption: "Valentine Love Letters", category: "holiday" },
+  { src: holidayHalloween.url, alt: "Pastel pink Halloween sugar cookies with smiling ghosts, floral pumpkins, and candy corn", caption: "Pink Ghosts & Pumpkins", category: "holiday" },
   { src: weddingBrideToBeLove.url, alt: "Pastel bridal shower sugar cookies with 'Bride To Be', 'love' script, diamond rings, and champagne bottles", caption: "Bride To Be — Pastel Bridal Shower", category: "wedding" },
   { src: weddingCheersBeers.url, alt: "'Cheers & Beers' engagement sugar cookies with beer bottles est. 2024 and blue 'Just Married' cars for E+C", caption: "Cheers & Beers — E+C 2024", category: "wedding" },
   { src: weddingGlTq.url, alt: "Elegant ivory and gold GL|TQ monogram wedding sugar cookies with champagne bottles, diamond rings, and 03.24.24 date", caption: "GL & TQ — 03.24.24", category: "wedding" },
