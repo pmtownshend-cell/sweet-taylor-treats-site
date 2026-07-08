@@ -7,7 +7,6 @@ import heroCookies from "@/assets/hero-cookies.jpg";
 import aboutMaker from "@/assets/about-maker.jpg";
 import galleryWedding1 from "@/assets/gallery-wedding-1.jpg";
 import galleryWedding2 from "@/assets/gallery-wedding-2.jpg";
-import galleryBaby from "@/assets/gallery-baby.jpg";
 import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryHoliday from "@/assets/gallery-holiday.jpg";
 
@@ -20,6 +19,14 @@ import birthdaySpaceStars from "@/assets/gallery/birthday-space-reach-four-stars
 import birthdayHappyDudeJoe from "@/assets/gallery/birthday-happy-dude-joe.jpg.asset.json";
 import birthdayBatmanNoah from "@/assets/gallery/birthday-batman-noah.jpg.asset.json";
 import birthdayPumpkinsAj from "@/assets/gallery/birthday-pumpkins-aj-one.jpg.asset.json";
+
+import babyOhBoyBlue from "@/assets/gallery/baby-oh-boy-blue.jpg.asset.json";
+import babyLittleCowboy from "@/assets/gallery/baby-little-cowboy.jpg.asset.json";
+import babyBurgundyHearts from "@/assets/gallery/baby-burgundy-pink-hearts.jpg.asset.json";
+import babyBearlyWait from "@/assets/gallery/baby-bearly-wait.jpg.asset.json";
+import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg.asset.json";
+import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg.asset.json";
+import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -47,14 +54,20 @@ type GalleryItem = {
 const GALLERY: GalleryItem[] = [
   { src: galleryWedding1, alt: "Ivory and gold leaf sugar cookies for a Virginia wedding", caption: "Wedding Suite No. 04", category: "wedding" },
   { src: birthdayCarsHudson.url, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
+  { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
   { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
+  { src: babyOhBoyBlue.url, alt: "Blue and white 'Oh Boy' baby shower sugar cookies with baby bottles, blocks, and gift shapes", caption: "Oh Boy — Blue & White", category: "baby" },
   { src: galleryCorporate, alt: "Custom logo sugar cookies for a DMV corporate event", caption: "Corporate Brand Set", category: "corporate" },
   { src: birthdayUnderTheSeaEmmy.url, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
+  { src: babyAhoyNautical.url, alt: "Nautical 'Ahoy It's a Boy' baby shower sugar cookies with sailboats, anchors, and sailor onesies", caption: "Ahoy — It's a Boy", category: "baby" },
   { src: birthdayDinosaursRawr.url, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
-  { src: galleryBaby, alt: "Pastel baby shower sugar cookies shaped like onesies and rattles", caption: "Spring Celebration", category: "baby" },
+  { src: babyLittleCowboy.url, alt: "Neutral brown and blue 'A Little Cowboy Is On The Way' baby shower sugar cookies with cow print rattles and bandana onesies", caption: "A Little Cowboy Is On The Way", category: "baby" },
   { src: birthdaySpaceStars.url, alt: "Pastel space themed sugar cookies with planets, rockets, and 'Reach Four the Stars' for a 4th birthday", caption: "Reach Four the Stars", category: "birthday" },
+  { src: babyPinkPiglet.url, alt: "Pink Piglet baby shower sugar cookies with onesies, bottles, and 'baby' script", caption: "Pink Piglet Baby Shower", category: "baby" },
   { src: birthdayBatmanNoah.url, alt: "Batman and Robin superhero sugar cookies personalized with 'Noah' for a 4th birthday", caption: "Noah's Batman & Robin", category: "birthday" },
+  { src: babyBurgundyHearts.url, alt: "Burgundy and pink baby shower sugar cookies with hearts, bottles, and baby footprints", caption: "Burgundy & Blush Baby", category: "baby" },
   { src: birthday90thEunice.url, alt: "Elegant rose gold '90' sugar cookies with white piped roses for Eunice's 90th birthday", caption: "Eunice's 90th", category: "birthday" },
+  { src: babyTeddyBearGender.url, alt: "Gender reveal sugar cookies with a teddy bear, blue and pink onesies and bottles", caption: "Teddy Bear Gender Reveal", category: "baby" },
   { src: birthdayHappyDudeJoe.url, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
   { src: birthdayPumpkinsAj.url, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
   { src: galleryHoliday, alt: "Silver and white snowflake holiday sugar cookies", caption: "Winter Collection", category: "holiday" },
