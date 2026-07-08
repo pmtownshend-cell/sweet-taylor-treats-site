@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -33,18 +33,20 @@ type GalleryItem = {
   alt: string;
   caption: string;
   category: Exclude<Category, "all">;
-  span?: "wide" | "tall" | "normal";
 };
 
+// Placeholder set — will be replaced with real photos as they come in.
 const GALLERY: GalleryItem[] = [
-  { src: galleryWedding1, alt: "White royal icing wedding cookies with gold leaf accents", caption: "Wedding Suite No. 04", category: "wedding", span: "wide" },
-  { src: galleryCorporate, alt: "Corporate logo sugar cookies", caption: "Corporate Brand Set", category: "corporate" },
-  { src: galleryBaby, alt: "Pastel baby shower cookies shaped like onesies and rattles", caption: "Spring Celebration", category: "baby" },
-  { src: galleryBirthday1, alt: "Pastel birthday number cookies with sprinkles", caption: "Birthday Numerals", category: "birthday" },
-  { src: galleryHoliday, alt: "Silver and white snowflake holiday cookies", caption: "Winter Collection", category: "holiday" },
-  { src: galleryWedding2, alt: "Monogram wedding cookies with gold calligraphy", caption: "Monogram Series", category: "wedding" },
-  { src: galleryBirthday2, alt: "Playful animal-shaped birthday cookies", caption: "Little Menagerie", category: "birthday" },
+  { src: galleryWedding1, alt: "Ivory and gold leaf sugar cookies for a Virginia wedding", caption: "Wedding Suite No. 04", category: "wedding" },
+  { src: galleryCorporate, alt: "Custom logo sugar cookies for a DMV corporate event", caption: "Corporate Brand Set", category: "corporate" },
+  { src: galleryBaby, alt: "Pastel baby shower sugar cookies shaped like onesies and rattles", caption: "Spring Celebration", category: "baby" },
+  { src: galleryBirthday1, alt: "Pastel birthday number sugar cookies with sprinkles", caption: "Birthday Numerals", category: "birthday" },
+  { src: galleryHoliday, alt: "Silver and white snowflake holiday sugar cookies", caption: "Winter Collection", category: "holiday" },
+  { src: galleryWedding2, alt: "Monogram wedding sugar cookies with gold calligraphy", caption: "Monogram Series", category: "wedding" },
+  { src: galleryBirthday2, alt: "Playful animal-shaped birthday sugar cookies", caption: "Little Menagerie", category: "birthday" },
 ];
+
+const PAGE_SIZE = 12;
 
 function Home() {
   return (
@@ -65,11 +67,11 @@ function Nav() {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <a href="#top" className="font-display text-2xl italic tracking-tight">
-          Taylor Sweet Treats
+          Tailored Sweet Treats
         </a>
         <div className="hidden gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-muted md:flex">
           <a href="#gallery" className="transition-colors hover:text-foreground">See the cookies</a>
-          <a href="#about" className="transition-colors hover:text-foreground">Meet Taylor</a>
+          <a href="#about" className="transition-colors hover:text-foreground">Meet the baker</a>
           <a href="#quote" className="text-accent transition-colors hover:text-foreground">
             Get a quote
           </a>
@@ -83,17 +85,20 @@ function Hero() {
   return (
     <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
       <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Custom sugar cookies, made by hand
+        Custom sugar cookies · Made in the DMV
       </span>
-      <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-        Cookies that make
+      <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
+        Hand-decorated sugar cookies
         <br />
-        <span className="italic">every occasion</span> sweeter.
+        for <span className="italic">every</span> celebration.
       </h1>
+      <p className="animate-reveal mb-12 max-w-xl text-balance text-sm leading-relaxed text-muted-foreground [animation-delay:150ms] md:text-base">
+        Custom-designed, hand-piped sugar cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
+      </p>
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
           src={heroCookies}
-          alt="White royal icing snowflake sugar cookies on a warm neutral surface"
+          alt="Hand-decorated custom sugar cookies on a warm neutral surface"
           width={1600}
           height={900}
           className="aspect-[21/9] w-full rounded-sm object-cover shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
@@ -105,19 +110,42 @@ function Hero() {
 
 function Gallery() {
   const [active, setActive] = useState<Category>("all");
+  const [visible, setVisible] = useState(PAGE_SIZE);
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
   const items = useMemo(
     () => (active === "all" ? GALLERY : GALLERY.filter((g) => g.category === active)),
     [active]
   );
+
+  // Reset pagination when the filter changes.
+  useEffect(() => {
+    setVisible(PAGE_SIZE);
+  }, [active]);
+
+  const shown = items.slice(0, visible);
+  const hasMore = visible < items.length;
+
+  // Lightbox keyboard nav
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowRight") setLightbox((i) => (i === null ? null : (i + 1) % shown.length));
+      if (e.key === "ArrowLeft") setLightbox((i) => (i === null ? null : (i - 1 + shown.length) % shown.length));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, shown.length]);
 
   return (
     <section id="gallery" className="border-y border-border bg-surface py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-md">
-            <h2 className="mb-4 text-pretty font-display text-4xl italic">A few favorite designs</h2>
+            <h2 className="mb-4 text-pretty font-display text-4xl italic">A few favorite sugar cookie designs</h2>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Every batch is baked fresh, hand-piped, and designed around your event. Pick a category below to see what we’ve been up to.
+              Every batch is baked fresh, hand-piped, and designed around your event. Pick a category to see what we've been up to.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -141,16 +169,12 @@ function Gallery() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-12 md:gap-6">
-          {items.map((item, idx) => (
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 lg:grid-cols-4">
+          {shown.map((item, idx) => (
             <figure
               key={item.src}
-              className={
-                "group relative overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-black/5 " +
-                (item.span === "wide" && idx === 0
-                  ? "col-span-2 md:col-span-8 md:row-span-2 aspect-[4/3]"
-                  : "col-span-1 md:col-span-4 aspect-square")
-              }
+              className="group relative aspect-square cursor-zoom-in overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-black/5"
+              onClick={() => setLightbox(idx)}
             >
               <img
                 src={item.src}
@@ -166,7 +190,59 @@ function Gallery() {
             </figure>
           ))}
         </div>
+
+        {hasMore && (
+          <div className="mt-12 flex justify-center">
+            <button
+              onClick={() => setVisible((v) => v + PAGE_SIZE)}
+              className="rounded-full border border-foreground px-6 py-2.5 font-mono text-[10px] uppercase tracking-widest transition-colors hover:bg-foreground hover:text-background"
+            >
+              Load more
+            </button>
+          </div>
+        )}
       </div>
+
+      {lightbox !== null && shown[lightbox] && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/85 p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            aria-label="Close"
+            className="absolute right-4 top-4 font-mono text-[10px] uppercase tracking-widest text-white/80 hover:text-white"
+            onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
+          >
+            Close ✕
+          </button>
+          <button
+            aria-label="Previous"
+            className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-2xl text-white/70 hover:text-white"
+            onClick={(e) => { e.stopPropagation(); setLightbox((i) => (i === null ? null : (i - 1 + shown.length) % shown.length)); }}
+          >
+            ‹
+          </button>
+          <button
+            aria-label="Next"
+            className="absolute right-4 top-1/2 -translate-y-1/2 font-mono text-2xl text-white/70 hover:text-white"
+            onClick={(e) => { e.stopPropagation(); setLightbox((i) => (i === null ? null : (i + 1) % shown.length)); }}
+          >
+            ›
+          </button>
+          <figure className="flex max-h-full max-w-4xl flex-col items-center gap-4" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={shown[lightbox].src}
+              alt={shown[lightbox].alt}
+              className="max-h-[80vh] w-auto rounded-sm object-contain"
+            />
+            <figcaption className="text-center font-mono text-[10px] uppercase tracking-widest text-white/80">
+              {shown[lightbox].caption}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </section>
   );
 }
@@ -177,7 +253,7 @@ function About() {
       <div className="order-2 md:order-1">
         <img
           src={aboutMaker}
-          alt="Baker's hands piping royal icing onto a sugar cookie in a home kitchen"
+          alt="Baker's hands piping royal icing onto a custom sugar cookie in a home kitchen"
           width={800}
           height={1000}
           loading="lazy"
@@ -186,25 +262,26 @@ function About() {
       </div>
       <div className="order-1 md:order-2">
         <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          Meet Taylor
+          Meet the baker
         </span>
         <h2 className="mb-8 font-display text-4xl italic leading-tight md:text-5xl">
           Baked with love — and a lot of piping bags.
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground">
-          Taylor Sweet Treats started in a cozy home kitchen with one simple idea: sugar cookies should be just as fun
-          to look at as they are to eat. Every order is baked fresh, hand decorated, and made specially for you.
+          Tailored Sweet Treats is a home-based sugar cookie business in Northern Virginia, serving the entire DMV.
+          Every order is baked fresh, hand decorated, and made specially for you — no two batches are quite the same.
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
-          We love the tiny details — the perfect shade of icing, the little florals, the monogram that matches your
-          invitation. Whether it’s a birthday, wedding, or “just because,” we’re here to make your treats feel personal.
+          We only do sugar cookies, and we love the tiny details — the perfect shade of icing, the little florals,
+          the monogram that matches your invitation. Whether it's a wedding, a baby shower, or a corporate launch,
+          we're here to make your treats feel personal.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
           <div className="grid size-12 place-items-center rounded-full bg-accent/10">
             <div className="size-2 rounded-full bg-accent" />
           </div>
           <p className="font-mono text-[11px] uppercase tracking-widest">
-            From our home kitchen to your celebration table
+            Northern Virginia · Serving the DMV
           </p>
         </div>
       </div>
@@ -232,7 +309,7 @@ function QuoteForm() {
     const details = String(fd.get("details") ?? "").trim();
 
     if (!name || !email || !details) {
-      toast.error("Mind filling in your name, email, and what you’re dreaming up?");
+      toast.error("Mind filling in your name, email, and what you're dreaming up?");
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -245,10 +322,9 @@ function QuoteForm() {
     }
 
     setSubmitting(true);
-    // No backend wired yet — simulate a successful submission and reset the form.
     await new Promise((r) => setTimeout(r, 600));
     setSubmitting(false);
-    toast.success("Got it! Taylor will be in touch within 2 business days.");
+    toast.success("Got it! We'll be in touch within 2 business days.");
     (e.target as HTMLFormElement).reset();
   };
 
@@ -260,7 +336,7 @@ function QuoteForm() {
     <section id="quote" className="bg-ink py-24 text-ink-foreground md:py-32">
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center md:mb-20">
-          <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Let’s get this party started</h2>
+          <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Let's get this party started</h2>
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
             Most orders need about 3 weeks notice — the sooner, the better!
           </p>
@@ -353,30 +429,25 @@ function Footer() {
     <footer className="border-t border-border py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex flex-col items-center gap-2 md:items-start">
-          <span className="font-display text-xl italic">Taylor Sweet Treats</span>
+          <span className="font-display text-xl italic">Tailored Sweet Treats</span>
           <a
-            href="mailto:hello@taylorsweettreats.com"
+            href="mailto:hello@tailoredsweettreats.com"
             className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent"
           >
-            hello@taylorsweettreats.com
+            hello@tailoredsweettreats.com
           </a>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            Serving the DMV — Northern VA · DC · MD
+          </span>
         </div>
         <div className="flex gap-8">
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/tailoredsweettreats/"
             target="_blank"
             rel="noreferrer noopener"
             className="font-mono text-[10px] uppercase tracking-widest transition-colors hover:text-accent"
           >
             Instagram
-          </a>
-          <a
-            href="https://pinterest.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="font-mono text-[10px] uppercase tracking-widest transition-colors hover:text-accent"
-          >
-            Pinterest
           </a>
           <a
             href="#quote"
@@ -386,7 +457,7 @@ function Footer() {
           </a>
         </div>
         <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-          © {new Date().getFullYear()} Taylor Sweet Treats
+          © {new Date().getFullYear()} Tailored Sweet Treats
         </p>
       </div>
     </footer>
