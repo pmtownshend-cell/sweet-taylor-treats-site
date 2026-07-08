@@ -72,9 +72,32 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const SITE_TITLE = "Taylor Sweet Treats — Handmade Custom Sugar Cookies";
+const SITE_TITLE = "Tailored Sweet Treats — Custom Sugar Cookies in the DMV";
 const SITE_DESC =
-  "Handmade, hand-piped custom sugar cookies for weddings, birthdays, baby showers, holidays, and corporate events. Baked to order in our home kitchen."; 
+  "Hand-decorated custom sugar cookies for weddings, birthdays, baby showers, holidays, and corporate events. Baked to order in Northern Virginia, serving the DMV — DC, Maryland & Virginia.";
+
+const LOCAL_BUSINESS_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  name: "Tailored Sweet Treats",
+  description: SITE_DESC,
+  image: "/",
+  url: "/",
+  telephone: "",
+  priceRange: "$$",
+  servesCuisine: "Custom Decorated Sugar Cookies",
+  areaServed: [
+    { "@type": "State", name: "Virginia" },
+    { "@type": "State", name: "Maryland" },
+    { "@type": "City", name: "Washington, D.C." },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "VA",
+    addressCountry: "US",
+  },
+  sameAs: ["https://www.instagram.com/tailoredsweettreats/"],
+};
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -83,10 +106,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: SITE_TITLE },
       { name: "description", content: SITE_DESC },
-      { name: "author", content: "Taylor Sweet Treats" },
+      { name: "author", content: "Tailored Sweet Treats" },
       { property: "og:title", content: SITE_TITLE },
       { property: "og:description", content: SITE_DESC },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Tailored Sweet Treats" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -97,6 +121,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(LOCAL_BUSINESS_JSONLD),
       },
     ],
   }),
