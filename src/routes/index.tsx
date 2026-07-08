@@ -366,7 +366,7 @@ const EVENT_TYPES = [
   "Wedding",
   "Baby Shower",
   "Holiday",
-  "Corporate",
+  "College / Graduation",
   "Other",
 ] as const;
 
