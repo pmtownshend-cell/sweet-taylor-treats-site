@@ -3,11 +3,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
-import cookieFootball from "@/assets/cookie-football.png.asset.json";
 import cookieCookout from "@/assets/cookie-cookout.png.asset.json";
-import cookieBaby from "@/assets/cookie-baby.png.asset.json";
-import cookieApple from "@/assets/cookie-apple.png.asset.json";
-import cookieMasters from "@/assets/cookie-masters.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
@@ -164,44 +160,24 @@ function Nav() {
 }
 
 function Hero() {
-  // Five cookies only, scattered big across the edges and behind the text.
-  const cookies = [
-    // left side
-    { src: cookieCookout.url, className: "left-[-14%] top-[-10%] w-44 -rotate-12 md:left-[-22%] md:top-[-12%] md:w-[32rem]" },
-    { src: cookieFootball.url, className: "left-[-6%] top-[22%] w-28 rotate-6 md:left-[2%] md:top-[20%] md:w-64" },
-    { src: cookieBaby.url, className: "left-[-10%] bottom-[8%] w-36 rotate-12 md:left-[-18%] md:bottom-[6%] md:w-[28rem]" },
-    { src: cookieMasters.url, className: "left-[2%] bottom-[-6%] w-20 -rotate-6 md:left-[10%] md:bottom-[-8%] md:w-44" },
-    // right side
-    { src: cookieMasters.url, className: "right-[-14%] top-[-10%] w-44 rotate-12 md:right-[-22%] md:top-[-12%] md:w-[32rem]" },
-    { src: cookieApple.url, className: "right-[-6%] top-[22%] w-28 -rotate-6 md:right-[2%] md:top-[20%] md:w-64" },
-    { src: cookieCookout.url, className: "right-[-10%] bottom-[8%] w-36 -rotate-12 md:right-[-18%] md:bottom-[6%] md:w-[28rem]" },
-    { src: cookieBaby.url, className: "right-[2%] bottom-[-6%] w-20 rotate-6 md:right-[10%] md:bottom-[-8%] md:w-44" },
-  ];
-
   return (
-    <section id="top" className="relative overflow-hidden px-6 pt-20 pb-24 md:pt-24 md:pb-32 min-h-[36rem] md:min-h-[46rem]">
-      {cookies.map((f, i) => (
+    <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
+      <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+        Custom cookies · Made in Loudoun County, VA
+      </span>
+      <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
+        Hand-decorated cookies
+        <br />
+        for <span className="italic">every</span> celebration.
+      </h1>
+      <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
-          key={i}
-          src={f.src}
-          alt=""
-          aria-hidden
-          className={`pointer-events-none absolute drop-shadow-md ${f.className}`}
+          src={cookieCookout.url}
+          alt="Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles"
+          width={1024}
+          height={1024}
+          className="aspect-square w-full rounded-sm object-contain shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
         />
-      ))}
-
-      <div className="relative mx-auto flex max-w-2xl flex-col items-center px-4 text-center md:px-0">
-        <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          Custom cookies · Made in Loudoun County, VA
-        </span>
-        <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-          Hand-decorated cookies
-          <br />
-          for <span className="italic">every</span> celebration.
-        </h1>
-        <p className="animate-reveal max-w-xl text-balance text-sm leading-relaxed text-muted-foreground [animation-delay:150ms] md:text-base">
-          Custom-designed, hand-piped cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
-        </p>
       </div>
     </section>
   );
