@@ -33,11 +33,22 @@ import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg.asset.json";
 import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg.asset.json";
 import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg.asset.json";
 
+import occasionMastersGolf from "@/assets/gallery/occasion-masters-golf-azaleas.jpg.asset.json";
+import occasionMastersJacket from "@/assets/gallery/occasion-masters-green-jacket-usa.jpg.asset.json";
+import occasionMonogramG from "@/assets/gallery/occasion-monogram-g-white.jpg.asset.json";
+import occasionUnicorns from "@/assets/gallery/occasion-unicorns-rainbows.jpg.asset.json";
+import occasionToughCookie from "@/assets/gallery/occasion-tough-cookie-ring-that-bell.jpg.asset.json";
+import occasionMarylandCrabs from "@/assets/gallery/occasion-maryland-crabs-sailboats.jpg.asset.json";
+import occasionPinkRibbon from "@/assets/gallery/occasion-pink-ribbon-hearts.jpg.asset.json";
+import occasionTeddyBears from "@/assets/gallery/occasion-teddy-bears.jpg.asset.json";
+import occasionShootingStars from "@/assets/gallery/occasion-shooting-stars.jpg.asset.json";
+import occasionBalletSlippers from "@/assets/gallery/occasion-ballet-slippers.jpg.asset.json";
+
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
-type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday";
+type Category = "all" | "wedding" | "birthday" | "baby" | "corporate" | "holiday" | "occasion";
 
 const CATEGORIES: { id: Category; label: string }[] = [
   { id: "all", label: "All" },
@@ -46,6 +57,7 @@ const CATEGORIES: { id: Category; label: string }[] = [
   { id: "baby", label: "Baby Showers" },
   { id: "corporate", label: "Corporate" },
   { id: "holiday", label: "Holidays" },
+  { id: "occasion", label: "Occasions" },
 ];
 
 type GalleryItem = {
@@ -82,6 +94,16 @@ const GALLERY: GalleryItem[] = [
   { src: weddingBrightLove.url, alt: "Bright pink, yellow, and orange 'love' wedding sugar cookies with buttercream flowers, diamond rings, and tiered cakes", caption: "Bright Love — Buttercream Bridal", category: "wedding" },
   { src: weddingButtercreamFlowers.url, alt: "Sixteen round sugar cookies topped with piped buttercream flowers in ivory, blush, and chocolate tones with pearl centers", caption: "Buttercream Flower Bar", category: "wedding" },
   { src: weddingDdLove.url, alt: "Blush and ivory 'D|D' monogram wedding sugar cookies with 'love' hearts, diamond rings, and 06.03.23 date", caption: "D & D — 06.03.23", category: "wedding" },
+  { src: occasionMastersGolf.url, alt: "Masters golf party sugar cookies with green jackets, azaleas, USA course map, golf balls, and putting greens", caption: "Masters Watch Party", category: "occasion" },
+  { src: occasionMastersJacket.url, alt: "Masters themed sugar cookies with green jackets, yellow USA course map with red flag, and dimpled golf balls", caption: "Green Jacket Sunday", category: "occasion" },
+  { src: occasionMonogramG.url, alt: "White-on-white script 'G' monogram sugar cookies for an elegant DMV event", caption: "Script G Monogram", category: "occasion" },
+  { src: occasionUnicorns.url, alt: "Pastel unicorn and rainbow sugar cookies with gold horns and cloud accents", caption: "Unicorns & Rainbows", category: "occasion" },
+  { src: occasionToughCookie.url, alt: "Breast cancer awareness sugar cookies with 'Tough Cookie', 'Ring That Bell', 'Cancer messed with the wrong girl', and pink ribbons", caption: "Tough Cookie — Awareness Set", category: "occasion" },
+  { src: occasionMarylandCrabs.url, alt: "Maryland themed sugar cookies with red crabs, state flag, Natty Boh cans, and sailboats for a DMV summer party", caption: "Maryland Summer", category: "occasion" },
+  { src: occasionPinkRibbon.url, alt: "Pink ribbon breast cancer awareness sugar cookies on heart and awareness ribbon shapes", caption: "Pink Ribbon Awareness", category: "occasion" },
+  { src: occasionTeddyBears.url, alt: "Airbrushed brown teddy bear sugar cookies with paw pads for a DMV bear-themed event", caption: "Teddy Bear Set", category: "occasion" },
+  { src: occasionShootingStars.url, alt: "Yellow shooting star and star sugar cookies for a celebration favor set", caption: "Shooting Stars Favors", category: "occasion" },
+  { src: occasionBalletSlippers.url, alt: "Pink and gold ballet slipper sugar cookies with piped bows for a dance recital", caption: "Ballet Slippers — Recital", category: "occasion" },
 ];
 
 const PAGE_SIZE = 12;
