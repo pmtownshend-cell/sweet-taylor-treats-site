@@ -7,8 +7,6 @@ import cookieFootball from "@/assets/cookie-football.png.asset.json";
 import cookieCookout from "@/assets/cookie-cookout.png.asset.json";
 import cookieBaby from "@/assets/cookie-baby.png.asset.json";
 import cookieApple from "@/assets/cookie-apple.png.asset.json";
-import cookieFive from "@/assets/cookie-five.png.asset.json";
-import cookieJustMarried from "@/assets/cookie-justmarried.png.asset.json";
 import cookieMasters from "@/assets/cookie-masters.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
