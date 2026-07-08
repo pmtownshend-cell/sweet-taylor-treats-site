@@ -166,12 +166,12 @@ function Hero() {
         Custom sugar cookies · Made in the DMV · Ships nationwide
       </span>
       <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-        Hand-decorated sugar cookies
+        Hand-decorated cookies
         <br />
         for <span className="italic">every</span> celebration.
       </h1>
       <p className="animate-reveal mb-12 max-w-xl text-balance text-sm leading-relaxed text-muted-foreground [animation-delay:150ms] md:text-base">
-        Custom-designed, hand-piped sugar cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
+        Custom-designed, hand-piped cookies baked to order in Northern Virginia — serving DC, Maryland, and Virginia.
       </p>
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
@@ -346,14 +346,13 @@ function About() {
           Hi, I'm Taylor.
         </h2>
         <p className="mb-6 leading-relaxed text-muted-foreground">
-          When I'm not chasing after my two little ones (and one very fluffy goldendoodle), you'll find me
-          elbow-deep in flour and royal icing. Tailored Sweet Treats started as a sweet way to channel my
-          passion for baking — a little quiet time between snack breaks, nap schedules, and everything in between.
+          Tailored Sweet Treats grew out of a love for baking that’s been with me forever.
+        </p>
+        <p className="mb-6 leading-relaxed text-muted-foreground">
+          What started as a hobby quickly became something more when friends began asking me to make cookies for birthdays, showers, holidays, and all the little moments worth celebrating. These days, between life with two little ones and our fluffy goldendoodle, Brady, baking has become the thing I make time for — a creative outlet I love getting to share with others.
         </p>
         <p className="mb-10 leading-relaxed text-muted-foreground">
-          Every cookie is baked and hand-decorated from my home kitchen in Northern Virginia, made with the same
-          love I pour into my family. I only do sugar cookies, and I love the tiny details — the perfect shade
-          of icing, the little florals, the monogram that matches your invitation.
+          Based in Loudoun County, Virginia, I make custom sugar cookies from my home kitchen, each one baked and hand-decorated with care. I love the details most — the pretty icing colors, florals, monograms, and little touches that make each set feel personal.
         </p>
         <div className="flex items-center gap-4 border-t border-border pt-8">
           <div className="grid size-12 place-items-center rounded-full bg-accent/10">
