@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 
 import heroCookies from "@/assets/hero-cookies.jpg";
+import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
 import aboutMaker from "@/assets/about-maker.jpg";
 import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
 import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
