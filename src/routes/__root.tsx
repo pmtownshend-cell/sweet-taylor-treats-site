@@ -74,7 +74,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 const SITE_TITLE = "Tailored Sweet Treats — Custom Sugar Cookies in the DMV";
 const SITE_DESC =
-  "Hand-decorated custom sugar cookies for weddings, birthdays, baby showers, holidays, and corporate events. Baked to order in Northern Virginia, serving the DMV — DC, Maryland & Virginia.";
+  "Hand-decorated custom sugar cookies for weddings, birthdays, baby showers, holidays, and special occasions. Baked to order in Northern Virginia, serving the DMV — DC, Maryland & Virginia — with shipping nationwide.";
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
@@ -120,7 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
     ],
     scripts: [
