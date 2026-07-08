@@ -161,22 +161,24 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
-      <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Custom cookies · Made in Loudoun County, VA
-      </span>
-      <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-        Hand-decorated cookies
-        <br />
-        for <span className="italic">every</span> celebration.
-      </h1>
-      <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
+    <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
+      <div className="mx-auto max-w-4xl px-6">
+        <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+          Custom cookies · Made in Loudoun County, VA
+        </span>
+        <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
+          Hand-decorated cookies
+          <br />
+          for <span className="italic">every</span> celebration.
+        </h1>
+      </div>
+      <div className="animate-reveal w-full [animation-delay:200ms]">
         <img
           src={heroCookies.url}
           alt="Hand-decorated sugar cookies for every celebration"
           width={1600}
           height={900}
-          className="aspect-[16/9] w-full rounded-sm object-contain shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
+          className="w-full object-contain"
         />
       </div>
     </section>
