@@ -57,7 +57,7 @@ type GalleryItem = {
 
 // Real photos from Tailored Sweet Treats. More will be added as they come in.
 const GALLERY: GalleryItem[] = [
-  { src: galleryWedding1, alt: "Ivory and gold leaf sugar cookies for a Virginia wedding", caption: "Wedding Suite No. 04", category: "wedding" },
+  { src: weddingMonogramB.url, alt: "Ivory sugar cookies with floral hexagon monograms, wedding date 6.28.24, gold rings, and 'love' script for a Virginia wedding", caption: "Floral Monogram Wedding — 6.28.24", category: "wedding" },
   { src: birthdayCarsHudson.url, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
   { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
   { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
