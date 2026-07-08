@@ -176,7 +176,7 @@ function Hero() {
       <div className="animate-reveal w-full max-w-4xl [animation-delay:200ms]">
         <img
           src={heroCookies}
-          alt="Hand-decorated custom sugar cookies on a warm neutral surface"
+          alt="Hand-decorated custom cookies on a warm neutral surface"
           width={1600}
           height={900}
           className="aspect-[21/9] w-full rounded-sm object-cover shadow-sm outline outline-1 -outline-offset-1 outline-black/5"
