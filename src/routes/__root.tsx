@@ -74,7 +74,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 const SITE_TITLE = "Tailored Sweet Treats — Custom Sugar Cookies in the DMV";
 const SITE_DESC =
-  "Hand-decorated custom sugar cookies for weddings, birthdays, baby showers, holidays, and special occasions. Baked to order in Northern Virginia, serving the DMV — DC, Maryland & Virginia — with shipping nationwide.";
+  "Hand-decorated custom cookies for weddings, birthdays, baby showers, holidays, and special occasions. Baked to order in Northern Virginia, serving the DMV — DC, Maryland & Virginia — with shipping nationwide.";
 
 const LOCAL_BUSINESS_JSONLD = {
   "@context": "https://schema.org",
