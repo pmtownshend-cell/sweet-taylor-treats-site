@@ -163,7 +163,7 @@ function Hero() {
   return (
     <section id="top" className="mx-auto flex max-w-6xl flex-col items-center px-6 pt-20 pb-24 text-center md:pt-24 md:pb-32">
       <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-        Custom cookies · Made in the DMV · Ships nationwide
+        Custom cookies · Made in Loudoun County, VA
       </span>
       <h1 className="animate-reveal mb-8 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
         Hand-decorated cookies
@@ -359,7 +359,7 @@ function About() {
             <div className="size-2 rounded-full bg-accent" />
           </div>
           <p className="font-mono text-[11px] uppercase tracking-widest">
-            Northern Virginia · Serving the DMV · Ships nationwide
+            Based in Loudoun County, Virginia
           </p>
         </div>
       </div>
@@ -446,6 +446,13 @@ function QuoteForm() {
           <Field label="How many cookies? (dozens)" className={labelCls}>
             <input required name="quantity" type="number" min={1} max={999} placeholder="2" className={inputCls} />
           </Field>
+          <Field label="Delivery or pickup? (within 20175)" className={labelCls}>
+            <select required name="fulfillment" defaultValue="" className={inputCls + " appearance-none"}>
+              <option value="" disabled className="text-stone-900">Choose one…</option>
+              <option value="pickup" className="text-stone-900">Pickup (20175)</option>
+              <option value="delivery" className="text-stone-900">Delivery (within 20175)</option>
+            </select>
+          </Field>
           <Field label="Inspiration photos (optional)" className={labelCls}>
             <input
               name="inspiration"
@@ -512,7 +519,7 @@ function Footer() {
             hello@tailoredsweettreats.com
           </a>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-            Serving the DMV — Northern VA · DC · MD · Shipping nationwide
+            Based in Loudoun County, Virginia
           </span>
         </div>
         <div className="flex gap-8">
