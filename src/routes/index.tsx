@@ -163,14 +163,14 @@ function Hero() {
   return (
     <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
       <div className="mx-auto max-w-4xl px-6">
-        <span className="animate-reveal mb-6 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          Custom cookies · Made in Loudoun County, VA
-        </span>
-        <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
+        <h1 className="animate-reveal mb-6 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
           Thoughtfully decorated cookies
           <br />
           for life’s sweetest occasions.
         </h1>
+        <p className="animate-reveal mb-12 text-lg text-balance leading-relaxed text-muted-foreground [animation-delay:100ms]">
+          Hand-decorated in Loudoun County, VA, with custom designs for birthdays, baby showers, weddings, holidays, and more.
+        </p>
       </div>
       <div className="animate-reveal w-full [animation-delay:200ms]">
         <img
