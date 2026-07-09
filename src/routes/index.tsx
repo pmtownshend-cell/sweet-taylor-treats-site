@@ -142,7 +142,7 @@ function Home() {
 function Nav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-3">
           <img src={logo.url} alt="Tailored Sweet Treats logo" className="h-12 w-12 rounded-full" />
           <span className="font-display text-2xl italic tracking-tight">Tailored Sweet Treats</span>
@@ -162,7 +162,7 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
-      <div className="mx-auto max-w-4xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         <h1 className="animate-reveal mb-6 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
           Thoughtfully decorated cookies
           <br />
@@ -217,9 +217,9 @@ function Gallery() {
 
   return (
     <section id="gallery" className="border-y border-border bg-surface py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <div className="max-w-md">
+          <div className="max-w-xl">
             <h2 className="mb-4 text-pretty font-display text-4xl italic">A few favorite sugar cookie designs</h2>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Every batch is baked fresh, hand-piped, and designed around your event. Pick a category to see what we've been up to.
@@ -326,7 +326,7 @@ function Gallery() {
 
 function About() {
   return (
-    <section id="about" className="mx-auto grid max-w-6xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
+    <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
       <div className="order-2 md:order-1">
         <img
           src={aboutMaker.url}
@@ -411,7 +411,7 @@ function QuoteForm() {
 
   return (
     <section id="quote" className="bg-ink py-24 text-ink-foreground md:py-32">
-      <div className="mx-auto max-w-4xl px-6">
+      <div className="mx-auto max-w-5xl px-6">
         <div className="mb-16 text-center md:mb-20">
           <h2 className="mb-4 font-display text-4xl italic md:text-5xl">Let's get this party started</h2>
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400">
@@ -508,7 +508,7 @@ function Field({
 function Footer() {
   return (
     <footer className="border-t border-border py-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <div className="flex flex-col items-center gap-2 md:items-start">
           <span className="font-display text-xl italic">Tailored Sweet Treats</span>
           <a
