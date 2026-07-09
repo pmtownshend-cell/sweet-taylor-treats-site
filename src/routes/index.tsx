@@ -64,7 +64,7 @@ const CATEGORIES: { id: Category; label: string }[] = [
   { id: "wedding", label: "Weddings" },
   { id: "birthday", label: "Birthdays" },
   { id: "baby", label: "Baby Showers" },
-  { id: "college", label: "College & Grad" },
+  { id: "college", label: "College" },
   { id: "holiday", label: "Holidays" },
   { id: "occasion", label: "Occasions" },
 ];
