@@ -167,9 +167,9 @@ function Hero() {
           Custom cookies · Made in Loudoun County, VA
         </span>
         <h1 className="animate-reveal mb-12 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
-          Hand-decorated cookies
+          Thoughtfully decorated cookies
           <br />
-          for <span className="italic">every</span> celebration.
+          for life’s sweetest occasions.
         </h1>
       </div>
       <div className="animate-reveal w-full [animation-delay:200ms]">
