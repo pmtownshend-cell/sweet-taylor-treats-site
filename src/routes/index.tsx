@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { submitQuote } from "@/lib/quote.functions";
 
 import heroCookies from "@/assets/hero-cookies.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
@@ -380,7 +381,8 @@ function QuoteForm() {
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const name = String(fd.get("name") ?? "").trim();
     const email = String(fd.get("email") ?? "").trim();
     const details = String(fd.get("details") ?? "").trim();
@@ -398,11 +400,35 @@ function QuoteForm() {
       return;
     }
 
+    const inspirationFiles = fd.getAll("inspiration") as File[];
+    const inspirationNames = inspirationFiles
+      .filter((f) => f && typeof f === "object" && f.name)
+      .map((f) => f.name)
+      .join(", ");
+
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 600));
-    setSubmitting(false);
-    toast.success("Got it! We'll be in touch within 2 business days.");
-    (e.target as HTMLFormElement).reset();
+    try {
+      await submitQuote({
+        data: {
+          name,
+          email,
+          phone: String(fd.get("phone") ?? "").trim(),
+          eventType: String(fd.get("eventType") ?? ""),
+          eventDate: String(fd.get("eventDate") ?? ""),
+          quantity: String(fd.get("quantity") ?? ""),
+          fulfillment: String(fd.get("fulfillment") ?? ""),
+          details,
+          inspiration: inspirationNames,
+        },
+      });
+      toast.success("Got it! We'll be in touch within 2 business days.");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Something went wrong sending your request. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputCls =
