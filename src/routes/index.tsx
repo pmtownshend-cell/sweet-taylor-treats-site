@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
+import { submitQuote } from "@/lib/quote.functions";
 
 import heroCookies from "@/assets/hero-cookies.png.asset.json";
 import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
