@@ -9,7 +9,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   // Static hosting (GitHub Pages): no server runtime, everything is prerendered
   // to plain HTML plus a client-side SPA fallback.
-  nitro: { preset: "static" },
+  nitro: false,
   tanstackStart: {
     // Prerender every discoverable route to static HTML.
     prerender: { enabled: true, crawlLinks: true, failOnError: false },
