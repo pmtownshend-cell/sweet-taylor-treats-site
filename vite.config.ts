@@ -11,9 +11,10 @@ export default defineConfig({
   // to plain HTML plus a client-side SPA fallback.
   nitro: false,
   tanstackStart: {
-    // Prerender every discoverable route to static HTML.
-    prerender: { enabled: true, crawlLinks: true, failOnError: false },
-    // SPA fallback shell so client-side routing works for unknown paths.
-    spa: { enabled: true },
+    // SPA build: one static HTML shell, client-side routing after hydration.
+    spa: {
+      enabled: true,
+      prerender: { outputPath: "index.html", crawlLinks: false },
+    },
   },
 });
