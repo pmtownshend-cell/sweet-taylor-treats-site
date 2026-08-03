@@ -163,6 +163,16 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
+      {/* Mobile only: top half of the collage above the text */}
+      <div className="animate-reveal relative mb-10 w-full overflow-hidden aspect-[32/3] md:hidden">
+        <img
+          src={heroCookies}
+          alt="Hand-decorated sugar cookies for every celebration"
+          width={1920}
+          height={360}
+          className="absolute inset-x-0 top-0 w-full"
+        />
+      </div>
       <div className="mx-auto max-w-5xl px-6">
         <h1 className="animate-reveal mb-6 text-balance font-display text-5xl leading-[0.95] tracking-tight [animation-delay:100ms] md:text-8xl">
           Thoughtfully crafted
@@ -173,18 +183,31 @@ function Hero() {
           Custom, hand-decorated cookies made in Loudoun County, Virginia, for birthdays, showers, weddings, holidays, and every celebration in between.
         </p>
       </div>
-      <div className="animate-reveal w-full [animation-delay:200ms]">
+      {/* Mobile only: bottom half of the collage below the text */}
+      <div className="animate-reveal relative w-full overflow-hidden aspect-[32/3] [animation-delay:200ms] md:hidden">
+        <img
+          src={heroCookies}
+          alt=""
+          aria-hidden="true"
+          width={1920}
+          height={360}
+          className="absolute inset-x-0 bottom-0 w-full"
+        />
+      </div>
+      {/* Desktop: full image below the text */}
+      <div className="animate-reveal hidden w-full [animation-delay:200ms] md:block">
         <img
           src={heroCookies}
           alt="Hand-decorated sugar cookies for every celebration"
-          width={1600}
-          height={900}
+          width={1920}
+          height={360}
           className="w-full object-contain"
         />
       </div>
     </section>
   );
 }
+
 
 function Gallery() {
   const [active, setActive] = useState<Category>("all");
@@ -328,7 +351,7 @@ function Gallery() {
 function About() {
   return (
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
-      <div className="order-2 md:order-1">
+      <div className="order-1 md:order-1">
         <img
           src={aboutMaker}
           alt="Taylor with her family — husband, two little ones, and their goldendoodle"
@@ -338,7 +361,7 @@ function About() {
           className="aspect-[4/5] w-full rounded-xl object-cover shadow-[0_20px_60px_-20px_rgba(80,70,140,0.35)] outline outline-1 -outline-offset-1 outline-black/5"
         />
       </div>
-      <div className="order-1 md:order-2">
+      <div className="order-2 md:order-2">
         <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
           Meet the baker
         </span>
