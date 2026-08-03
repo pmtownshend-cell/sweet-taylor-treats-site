@@ -1,7 +1,17 @@
-import { createServerFn } from "@tanstack/react-start";
+const FORM_ACTION =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfPbAdl9X09aKemTa438KGnG8Z2tkrf3oE1CTZ1zXqBnzk-EQ/formResponse";
 
-const SPREADSHEET_ID = "1_ItpM2S3KBhbRX8TXILnS13ZbhfPgvUpokdXhff19ms";
-const GATEWAY_URL = "https://connector-gateway.lovable.dev/google_sheets";
+const ENTRY_IDS = {
+  name: "entry.2104090018",
+  email: "entry.1759544863",
+  phone: "entry.1353105598",
+  eventType: "entry.1382226890",
+  eventDate: "entry.204675777",
+  quantity: "entry.1277051271",
+  fulfillment: "entry.368809433",
+  details: "entry.473005184",
+  inspiration: "entry.1741758196",
+} as const;
 
 export type QuoteInput = {
   name: string;
@@ -15,50 +25,20 @@ export type QuoteInput = {
   inspiration?: string;
 };
 
-export const submitQuote = createServerFn({ method: "POST" })
-  .inputValidator((data: QuoteInput): QuoteInput => {
-    if (!data || typeof data !== "object") throw new Error("Invalid input");
-    const req = ["name", "email", "eventType", "eventDate", "quantity", "fulfillment", "details"] as const;
-    for (const k of req) {
-      if (!data[k] || typeof data[k] !== "string") throw new Error(`Missing field: ${k}`);
-    }
-    if (data.name.length > 100 || data.details.length > 2000) throw new Error("Field too long");
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) throw new Error("Invalid email");
-    return data;
-  })
-  .handler(async ({ data }) => {
-    const lovableKey = process.env.LOVABLE_API_KEY;
-    const connKey = process.env.GOOGLE_SHEETS_API_KEY;
-    if (!lovableKey || !connKey) throw new Error("Sheets connection is not configured");
+/**
+ * Submits the quote request straight to Google Forms from the browser.
+ * Uses mode: "no-cors" — the response is opaque, so success is optimistic.
+ */
+export async function submitQuote(input: QuoteInput): Promise<void> {
+  const body = new URLSearchParams();
+  for (const [key, entryId] of Object.entries(ENTRY_IDS)) {
+    body.append(entryId, (input[key as keyof QuoteInput] ?? "").toString());
+  }
 
-    const row = [
-      new Date().toISOString(),
-      data.name,
-      data.email,
-      data.phone ?? "",
-      data.eventType,
-      data.eventDate,
-      data.quantity,
-      data.fulfillment,
-      data.details,
-      data.inspiration ?? "",
-    ];
-
-    const url = `${GATEWAY_URL}/v4/spreadsheets/${SPREADSHEET_ID}/values/Sheet1!A1:J1:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`;
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${lovableKey}`,
-        "X-Connection-Api-Key": connKey,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ values: [row] }),
-    });
-
-    if (!res.ok) {
-      const body = await res.text();
-      console.error(`Sheets append failed [${res.status}]: ${body}`);
-      throw new Error(`Failed to save quote [${res.status}]`);
-    }
-    return { ok: true };
+  await fetch(FORM_ACTION, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: body.toString(),
   });
+}

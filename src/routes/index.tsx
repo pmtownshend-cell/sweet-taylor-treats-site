@@ -409,18 +409,17 @@ function QuoteForm() {
     setSubmitting(true);
     try {
       await submitQuote({
-        data: {
-          name,
-          email,
-          phone: String(fd.get("phone") ?? "").trim(),
-          eventType: String(fd.get("eventType") ?? ""),
-          eventDate: String(fd.get("eventDate") ?? ""),
-          quantity: String(fd.get("quantity") ?? ""),
-          fulfillment: String(fd.get("fulfillment") ?? ""),
-          details,
-          inspiration: inspirationNames,
-        },
+        name,
+        email,
+        phone: String(fd.get("phone") ?? "").trim(),
+        eventType: String(fd.get("eventType") ?? ""),
+        eventDate: String(fd.get("eventDate") ?? ""),
+        quantity: String(fd.get("quantity") ?? ""),
+        fulfillment: String(fd.get("fulfillment") ?? ""),
+        details,
+        inspiration: inspirationNames,
       });
+
       toast.success("Got it! We'll be in touch within 2 business days.");
       form.reset();
     } catch (err) {
