@@ -351,7 +351,7 @@ function Gallery() {
 function About() {
   return (
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
-      <div className="order-2 md:order-1">
+      <div className="order-1 md:order-1">
         <img
           src={aboutMaker}
           alt="Taylor with her family — husband, two little ones, and their goldendoodle"
@@ -361,7 +361,7 @@ function About() {
           className="aspect-[4/5] w-full rounded-xl object-cover shadow-[0_20px_60px_-20px_rgba(80,70,140,0.35)] outline outline-1 -outline-offset-1 outline-black/5"
         />
       </div>
-      <div className="order-1 md:order-2">
+      <div className="order-2 md:order-2">
         <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
           Meet the baker
         </span>
