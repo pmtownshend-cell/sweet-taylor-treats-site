@@ -353,6 +353,15 @@ function About() {
   return (
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
       <div className="order-1 md:order-1">
+        {/* Mobile only: heading above the photo */}
+        <div className="md:hidden">
+          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+            Meet the baker
+          </span>
+          <h2 className="mb-8 font-display text-5xl leading-[1.05]">
+            Hi, I'm Taylor.
+          </h2>
+        </div>
         <img
           src={aboutMaker}
           alt="Taylor with her family — husband, two little ones, and their goldendoodle"
@@ -363,12 +372,15 @@ function About() {
         />
       </div>
       <div className="order-2 md:order-2">
-        <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          Meet the baker
-        </span>
-        <h2 className="mb-8 font-display text-5xl leading-[1.05] md:text-6xl">
-          Hi, I'm Taylor.
-        </h2>
+        <div className="hidden md:block">
+          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+            Meet the baker
+          </span>
+          <h2 className="mb-8 font-display text-5xl leading-[1.05] md:text-6xl">
+            Hi, I'm Taylor.
+          </h2>
+        </div>
+
         <p className="mb-6 leading-relaxed text-muted-foreground">
           Tailored Sweet Treats grew out of a love for baking that’s been with me forever.
         </p>
