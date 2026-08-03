@@ -4,55 +4,55 @@ import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { submitQuote } from "@/lib/quote.functions";
 
-import heroCookies from "@/assets/hero-cookies.png.asset.json";
-import logo from "@/assets/tailored-sweet-treats-logo.jpg.asset.json";
-import aboutMaker from "@/assets/taylor-family.jpg.asset.json";
-import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg.asset.json";
-import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg.asset.json";
-import weddingMonogramB from "@/assets/gallery/wedding-monogram-b-love-floral.jpg.asset.json";
-import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg.asset.json";
-import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg.asset.json";
-import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg.asset.json";
-import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg.asset.json";
-import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg.asset.json";
-import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg.asset.json";
-import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg.asset.json";
-import holidayChristmas from "@/assets/gallery/holiday-christmas-classic.jpg.asset.json";
-import holidayValentines from "@/assets/gallery/holiday-valentines-love-letters.jpg.asset.json";
-import holidayHalloween from "@/assets/gallery/holiday-halloween-pink-ghosts.jpg.asset.json";
+import heroCookies from "@/assets/hero-cookies.png";
+import logo from "@/assets/tailored-sweet-treats-logo.jpg";
+import aboutMaker from "@/assets/taylor-family.jpg";
+import weddingCheersBeers from "@/assets/gallery/wedding-cheers-beers-just-married.jpg";
+import weddingBrideToBeLove from "@/assets/gallery/wedding-bride-to-be-love.jpg";
+import weddingMonogramB from "@/assets/gallery/wedding-monogram-b-love-floral.jpg";
+import weddingGlTq from "@/assets/gallery/wedding-gl-tq-champagne.jpg";
+import weddingBrightLove from "@/assets/gallery/wedding-bright-love-cake-florals.jpg";
+import weddingButtercreamFlowers from "@/assets/gallery/wedding-buttercream-flower-neutrals.jpg";
+import weddingDdLove from "@/assets/gallery/wedding-dd-love-06-03-23.jpg";
+import collegeJmu from "@/assets/gallery/college-jmu-virginia.jpg";
+import collegeAlabama from "@/assets/gallery/college-alabama-bama-bound-2024.jpg";
+import collegeMaryland from "@/assets/gallery/college-maryland-alyssa-grad.jpg";
+import holidayChristmas from "@/assets/gallery/holiday-christmas-classic.jpg";
+import holidayValentines from "@/assets/gallery/holiday-valentines-love-letters.jpg";
+import holidayHalloween from "@/assets/gallery/holiday-halloween-pink-ghosts.jpg";
 
-import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg.asset.json";
-import birthday90thEunice from "@/assets/gallery/birthday-90th-eunice.jpg.asset.json";
-import birthdayDinosaursRawr from "@/assets/gallery/birthday-dinosaurs-rawr.jpg.asset.json";
-import birthdayDonutsSophia from "@/assets/gallery/birthday-donuts-sophia.jpg.asset.json";
-import birthdayUnderTheSeaEmmy from "@/assets/gallery/birthday-under-the-sea-emmy.jpg.asset.json";
-import birthdaySpaceStars from "@/assets/gallery/birthday-space-reach-four-stars.jpg.asset.json";
-import birthdayHappyDudeJoe from "@/assets/gallery/birthday-happy-dude-joe.jpg.asset.json";
-import birthdayBatmanNoah from "@/assets/gallery/birthday-batman-noah.jpg.asset.json";
-import birthdayPumpkinsAj from "@/assets/gallery/birthday-pumpkins-aj-one.jpg.asset.json";
+import birthdayCarsHudson from "@/assets/gallery/birthday-cars-hudson.jpg";
+import birthday90thEunice from "@/assets/gallery/birthday-90th-eunice.jpg";
+import birthdayDinosaursRawr from "@/assets/gallery/birthday-dinosaurs-rawr.jpg";
+import birthdayDonutsSophia from "@/assets/gallery/birthday-donuts-sophia.jpg";
+import birthdayUnderTheSeaEmmy from "@/assets/gallery/birthday-under-the-sea-emmy.jpg";
+import birthdaySpaceStars from "@/assets/gallery/birthday-space-reach-four-stars.jpg";
+import birthdayHappyDudeJoe from "@/assets/gallery/birthday-happy-dude-joe.jpg";
+import birthdayBatmanNoah from "@/assets/gallery/birthday-batman-noah.jpg";
+import birthdayPumpkinsAj from "@/assets/gallery/birthday-pumpkins-aj-one.jpg";
 
-import babyOhBoyBlue from "@/assets/gallery/baby-oh-boy-blue.jpg.asset.json";
-import babyLittleCowboy from "@/assets/gallery/baby-little-cowboy.jpg.asset.json";
-import babyBurgundyHearts from "@/assets/gallery/baby-burgundy-pink-hearts.jpg.asset.json";
-import babyBearlyWait from "@/assets/gallery/baby-bearly-wait.jpg.asset.json";
-import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg.asset.json";
-import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg.asset.json";
-import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg.asset.json";
+import babyOhBoyBlue from "@/assets/gallery/baby-oh-boy-blue.jpg";
+import babyLittleCowboy from "@/assets/gallery/baby-little-cowboy.jpg";
+import babyBurgundyHearts from "@/assets/gallery/baby-burgundy-pink-hearts.jpg";
+import babyBearlyWait from "@/assets/gallery/baby-bearly-wait.jpg";
+import babyPinkPiglet from "@/assets/gallery/baby-pink-piglet.jpg";
+import babyAhoyNautical from "@/assets/gallery/baby-ahoy-nautical.jpg";
+import babyTeddyBearGender from "@/assets/gallery/baby-teddy-bear-gender.jpg";
 
-import occasionMastersGolf from "@/assets/gallery/occasion-masters-golf-azaleas.jpg.asset.json";
-import occasionMastersJacket from "@/assets/gallery/occasion-masters-green-jacket-usa.jpg.asset.json";
-import occasionMonogramG from "@/assets/gallery/occasion-monogram-g-white.jpg.asset.json";
-import occasionUnicorns from "@/assets/gallery/occasion-unicorns-rainbows.jpg.asset.json";
-import occasionToughCookie from "@/assets/gallery/occasion-tough-cookie-ring-that-bell.jpg.asset.json";
-import occasionMarylandCrabs from "@/assets/gallery/occasion-maryland-crabs-sailboats.jpg.asset.json";
-import occasionPinkRibbon from "@/assets/gallery/occasion-pink-ribbon-hearts.jpg.asset.json";
-import occasionTeddyBears from "@/assets/gallery/occasion-teddy-bears.jpg.asset.json";
-import occasionShootingStars from "@/assets/gallery/occasion-shooting-stars.jpg.asset.json";
-import occasionBalletSlippers from "@/assets/gallery/occasion-ballet-slippers.jpg.asset.json";
-import occasionTeacherApple from "@/assets/gallery/occasion-teacher-apple-aplus.jpg.asset.json";
-import occasionLemonsTiles from "@/assets/gallery/occasion-lemons-blue-tiles.jpg.asset.json";
-import occasionFootball from "@/assets/gallery/occasion-football-go-team.jpg.asset.json";
-import occasionCookout from "@/assets/gallery/occasion-cookout-burgers-watermelon.jpg.asset.json";
+import occasionMastersGolf from "@/assets/gallery/occasion-masters-golf-azaleas.jpg";
+import occasionMastersJacket from "@/assets/gallery/occasion-masters-green-jacket-usa.jpg";
+import occasionMonogramG from "@/assets/gallery/occasion-monogram-g-white.jpg";
+import occasionUnicorns from "@/assets/gallery/occasion-unicorns-rainbows.jpg";
+import occasionToughCookie from "@/assets/gallery/occasion-tough-cookie-ring-that-bell.jpg";
+import occasionMarylandCrabs from "@/assets/gallery/occasion-maryland-crabs-sailboats.jpg";
+import occasionPinkRibbon from "@/assets/gallery/occasion-pink-ribbon-hearts.jpg";
+import occasionTeddyBears from "@/assets/gallery/occasion-teddy-bears.jpg";
+import occasionShootingStars from "@/assets/gallery/occasion-shooting-stars.jpg";
+import occasionBalletSlippers from "@/assets/gallery/occasion-ballet-slippers.jpg";
+import occasionTeacherApple from "@/assets/gallery/occasion-teacher-apple-aplus.jpg";
+import occasionLemonsTiles from "@/assets/gallery/occasion-lemons-blue-tiles.jpg";
+import occasionFootball from "@/assets/gallery/occasion-football-go-team.jpg";
+import occasionCookout from "@/assets/gallery/occasion-cookout-burgers-watermelon.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -79,49 +79,49 @@ type GalleryItem = {
 
 // Real photos from Tailored Sweet Treats. More will be added as they come in.
 const GALLERY: GalleryItem[] = [
-  { src: weddingMonogramB.url, alt: "Ivory sugar cookies with floral hexagon monograms, wedding date 6.28.24, gold rings, and 'love' script for a Virginia wedding", caption: "Floral Monogram Wedding — 6.28.24", category: "wedding" },
-  { src: birthdayCarsHudson.url, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
-  { src: babyBearlyWait.url, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
-  { src: birthdayDonutsSophia.url, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
-  { src: babyOhBoyBlue.url, alt: "Blue and white 'Oh Boy' baby shower sugar cookies with baby bottles, blocks, and gift shapes", caption: "Oh Boy — Blue & White", category: "baby" },
-  { src: collegeMaryland.url, alt: "University of Maryland graduation sugar cookies with Testudo mascot, red M, black cap and gown, and 'Alyssa — University of Maryland' plaques", caption: "Alyssa — Maryland Grad", category: "college" },
-  { src: birthdayUnderTheSeaEmmy.url, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
-  { src: babyAhoyNautical.url, alt: "Nautical 'Ahoy It's a Boy' baby shower sugar cookies with sailboats, anchors, and sailor onesies", caption: "Ahoy — It's a Boy", category: "baby" },
-  { src: birthdayDinosaursRawr.url, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
-  { src: babyLittleCowboy.url, alt: "Neutral brown and blue 'A Little Cowboy Is On The Way' baby shower sugar cookies with cow print rattles and bandana onesies", caption: "A Little Cowboy Is On The Way", category: "baby" },
-  { src: birthdaySpaceStars.url, alt: "Pastel space themed sugar cookies with planets, rockets, and 'Reach Four the Stars' for a 4th birthday", caption: "Reach Four the Stars", category: "birthday" },
-  { src: babyPinkPiglet.url, alt: "Pink Piglet baby shower sugar cookies with onesies, bottles, and 'baby' script", caption: "Pink Piglet Baby Shower", category: "baby" },
-  { src: birthdayBatmanNoah.url, alt: "Batman and Robin superhero sugar cookies personalized with 'Noah' for a 4th birthday", caption: "Noah's Batman & Robin", category: "birthday" },
-  { src: babyBurgundyHearts.url, alt: "Burgundy and pink baby shower sugar cookies with hearts, bottles, and baby footprints", caption: "Burgundy & Blush Baby", category: "baby" },
-  { src: birthday90thEunice.url, alt: "Elegant rose gold '90' sugar cookies with white piped roses for Eunice's 90th birthday", caption: "Eunice's 90th", category: "birthday" },
-  { src: babyTeddyBearGender.url, alt: "Gender reveal sugar cookies with a teddy bear, blue and pink onesies and bottles", caption: "Teddy Bear Gender Reveal", category: "baby" },
-  { src: birthdayHappyDudeJoe.url, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
-  { src: birthdayPumpkinsAj.url, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
-  { src: holidayChristmas.url, alt: "Classic Christmas sugar cookies with gingerbread man, ugly sweater, gift boxes, Santa, Christmas tree, gingerbread house, and snowflake", caption: "Classic Christmas Set", category: "holiday" },
-  { src: holidayValentines.url, alt: "Pink and red Valentine's Day sugar cookies with hearts, 'LOVE', love letters, and personalized name banners", caption: "Valentine Love Letters", category: "holiday" },
-  { src: holidayHalloween.url, alt: "Pastel pink Halloween sugar cookies with smiling ghosts, floral pumpkins, and candy corn", caption: "Pink Ghosts & Pumpkins", category: "holiday" },
-  { src: weddingBrideToBeLove.url, alt: "Pastel bridal shower sugar cookies with 'Bride To Be', 'love' script, diamond rings, and champagne bottles", caption: "Bride To Be — Pastel Bridal Shower", category: "wedding" },
-  { src: weddingCheersBeers.url, alt: "'Cheers & Beers' engagement sugar cookies with beer bottles est. 2024 and blue 'Just Married' cars for E+C", caption: "Cheers & Beers — E+C 2024", category: "wedding" },
-  { src: weddingGlTq.url, alt: "Elegant ivory and gold GL|TQ monogram wedding sugar cookies with champagne bottles, diamond rings, and 03.24.24 date", caption: "GL & TQ — 03.24.24", category: "wedding" },
-  { src: weddingBrightLove.url, alt: "Bright pink, yellow, and orange 'love' wedding sugar cookies with buttercream flowers, diamond rings, and tiered cakes", caption: "Bright Love — Buttercream Bridal", category: "wedding" },
-  { src: weddingButtercreamFlowers.url, alt: "Sixteen round sugar cookies topped with piped buttercream flowers in ivory, blush, and chocolate tones with pearl centers", caption: "Buttercream Flower Bar", category: "wedding" },
-  { src: weddingDdLove.url, alt: "Blush and ivory 'D|D' monogram wedding sugar cookies with 'love' hearts, diamond rings, and 06.03.23 date", caption: "D & D — 06.03.23", category: "wedding" },
-  { src: occasionMastersGolf.url, alt: "Masters golf party sugar cookies with green jackets, azaleas, USA course map, golf balls, and putting greens", caption: "Masters Watch Party", category: "occasion" },
-  { src: occasionMastersJacket.url, alt: "Masters themed sugar cookies with green jackets, yellow USA course map with red flag, and dimpled golf balls", caption: "Green Jacket Sunday", category: "occasion" },
-  { src: occasionMonogramG.url, alt: "White-on-white script 'G' monogram sugar cookies for an elegant DMV event", caption: "Script G Monogram", category: "occasion" },
-  { src: occasionUnicorns.url, alt: "Pastel unicorn and rainbow sugar cookies with gold horns and cloud accents", caption: "Unicorns & Rainbows", category: "occasion" },
-  { src: occasionToughCookie.url, alt: "Breast cancer awareness sugar cookies with 'Tough Cookie', 'Ring That Bell', 'Cancer messed with the wrong girl', and pink ribbons", caption: "Tough Cookie — Awareness Set", category: "occasion" },
-  { src: occasionMarylandCrabs.url, alt: "Maryland themed sugar cookies with red crabs, state flag, Natty Boh cans, and sailboats for a DMV summer party", caption: "Maryland Summer", category: "occasion" },
-  { src: occasionPinkRibbon.url, alt: "Pink ribbon breast cancer awareness sugar cookies on heart and awareness ribbon shapes", caption: "Pink Ribbon Awareness", category: "occasion" },
-  { src: occasionTeddyBears.url, alt: "Airbrushed brown teddy bear sugar cookies with paw pads for a DMV bear-themed event", caption: "Teddy Bear Set", category: "occasion" },
-  { src: occasionShootingStars.url, alt: "Yellow shooting star and star sugar cookies for a celebration favor set", caption: "Shooting Stars Favors", category: "occasion" },
-  { src: occasionBalletSlippers.url, alt: "Pink and gold ballet slipper sugar cookies with piped bows for a dance recital", caption: "Ballet Slippers — Recital", category: "occasion" },
-  { src: occasionTeacherApple.url, alt: "Teacher appreciation sugar cookies with a red apple and notebook paper marked 'A+'", caption: "A+ Teacher Appreciation", category: "occasion" },
-  { src: occasionLemonsTiles.url, alt: "Amalfi inspired sugar cookies with yellow lemons, lemon slices, and blue Mediterranean tile squares", caption: "Amalfi Lemons & Tiles", category: "occasion" },
-  { src: occasionFootball.url, alt: "Game day sugar cookies with a brown football, blue 'Go Team' helmet, and X's and O's playbook", caption: "Game Day — Go Team", category: "occasion" },
-  { src: occasionCookout.url, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
-  { src: collegeJmu.url, alt: "James Madison University JMU sugar cookies in the shape of the state of Virginia with royal blue icing and gold JMU lettering", caption: "JMU — Virginia Bound", category: "college" },
-  { src: collegeAlabama.url, alt: "Alabama 'Bama Bound Class of 2024' graduation sugar cookies with crimson elephant, script A, grad caps, and shield", caption: "Bama Bound — Class of 2024", category: "college" },
+  { src: weddingMonogramB, alt: "Ivory sugar cookies with floral hexagon monograms, wedding date 6.28.24, gold rings, and 'love' script for a Virginia wedding", caption: "Floral Monogram Wedding — 6.28.24", category: "wedding" },
+  { src: birthdayCarsHudson, alt: "Disney Cars themed sugar cookie set with Lightning McQueen, Mater, traffic lights, and 'Speed Limit 2' for Hudson's 2nd birthday", caption: "Hudson's Cars 2nd Birthday", category: "birthday" },
+  { src: babyBearlyWait, alt: "Neutral teddy bear baby shower sugar cookies with 'We Can Bearly Wait' plaque, hot air balloon, and onesie", caption: "We Can Bearly Wait", category: "baby" },
+  { src: birthdayDonutsSophia, alt: "Pastel donut, balloon, and number 3 sugar cookies personalized for Sophia's 3rd birthday", caption: "Sophia's Donut Party", category: "birthday" },
+  { src: babyOhBoyBlue, alt: "Blue and white 'Oh Boy' baby shower sugar cookies with baby bottles, blocks, and gift shapes", caption: "Oh Boy — Blue & White", category: "baby" },
+  { src: collegeMaryland, alt: "University of Maryland graduation sugar cookies with Testudo mascot, red M, black cap and gown, and 'Alyssa — University of Maryland' plaques", caption: "Alyssa — Maryland Grad", category: "college" },
+  { src: birthdayUnderTheSeaEmmy, alt: "Under-the-sea sugar cookies with seahorses, starfish, shells, and mermaid tails for Emmy's 5th birthday", caption: "Emmy's Under the Sea", category: "birthday" },
+  { src: babyAhoyNautical, alt: "Nautical 'Ahoy It's a Boy' baby shower sugar cookies with sailboats, anchors, and sailor onesies", caption: "Ahoy — It's a Boy", category: "baby" },
+  { src: birthdayDinosaursRawr, alt: "Pastel blue and green dinosaur sugar cookies with 'RAWR!' plaque for a 2nd birthday", caption: "Dinosaur RAWR Party", category: "birthday" },
+  { src: babyLittleCowboy, alt: "Neutral brown and blue 'A Little Cowboy Is On The Way' baby shower sugar cookies with cow print rattles and bandana onesies", caption: "A Little Cowboy Is On The Way", category: "baby" },
+  { src: birthdaySpaceStars, alt: "Pastel space themed sugar cookies with planets, rockets, and 'Reach Four the Stars' for a 4th birthday", caption: "Reach Four the Stars", category: "birthday" },
+  { src: babyPinkPiglet, alt: "Pink Piglet baby shower sugar cookies with onesies, bottles, and 'baby' script", caption: "Pink Piglet Baby Shower", category: "baby" },
+  { src: birthdayBatmanNoah, alt: "Batman and Robin superhero sugar cookies personalized with 'Noah' for a 4th birthday", caption: "Noah's Batman & Robin", category: "birthday" },
+  { src: babyBurgundyHearts, alt: "Burgundy and pink baby shower sugar cookies with hearts, bottles, and baby footprints", caption: "Burgundy & Blush Baby", category: "baby" },
+  { src: birthday90thEunice, alt: "Elegant rose gold '90' sugar cookies with white piped roses for Eunice's 90th birthday", caption: "Eunice's 90th", category: "birthday" },
+  { src: babyTeddyBearGender, alt: "Gender reveal sugar cookies with a teddy bear, blue and pink onesies and bottles", caption: "Teddy Bear Gender Reveal", category: "baby" },
+  { src: birthdayHappyDudeJoe, alt: "Sage green checkered smiley face 'One Happy Dude' sugar cookies for Joe's 1st birthday", caption: "One Happy Dude — Joe", category: "birthday" },
+  { src: birthdayPumpkinsAj, alt: "Fall themed pumpkin and floral number 1 sugar cookies for AJ's first birthday", caption: "AJ's Pumpkin First Birthday", category: "birthday" },
+  { src: holidayChristmas, alt: "Classic Christmas sugar cookies with gingerbread man, ugly sweater, gift boxes, Santa, Christmas tree, gingerbread house, and snowflake", caption: "Classic Christmas Set", category: "holiday" },
+  { src: holidayValentines, alt: "Pink and red Valentine's Day sugar cookies with hearts, 'LOVE', love letters, and personalized name banners", caption: "Valentine Love Letters", category: "holiday" },
+  { src: holidayHalloween, alt: "Pastel pink Halloween sugar cookies with smiling ghosts, floral pumpkins, and candy corn", caption: "Pink Ghosts & Pumpkins", category: "holiday" },
+  { src: weddingBrideToBeLove, alt: "Pastel bridal shower sugar cookies with 'Bride To Be', 'love' script, diamond rings, and champagne bottles", caption: "Bride To Be — Pastel Bridal Shower", category: "wedding" },
+  { src: weddingCheersBeers, alt: "'Cheers & Beers' engagement sugar cookies with beer bottles est. 2024 and blue 'Just Married' cars for E+C", caption: "Cheers & Beers — E+C 2024", category: "wedding" },
+  { src: weddingGlTq, alt: "Elegant ivory and gold GL|TQ monogram wedding sugar cookies with champagne bottles, diamond rings, and 03.24.24 date", caption: "GL & TQ — 03.24.24", category: "wedding" },
+  { src: weddingBrightLove, alt: "Bright pink, yellow, and orange 'love' wedding sugar cookies with buttercream flowers, diamond rings, and tiered cakes", caption: "Bright Love — Buttercream Bridal", category: "wedding" },
+  { src: weddingButtercreamFlowers, alt: "Sixteen round sugar cookies topped with piped buttercream flowers in ivory, blush, and chocolate tones with pearl centers", caption: "Buttercream Flower Bar", category: "wedding" },
+  { src: weddingDdLove, alt: "Blush and ivory 'D|D' monogram wedding sugar cookies with 'love' hearts, diamond rings, and 06.03.23 date", caption: "D & D — 06.03.23", category: "wedding" },
+  { src: occasionMastersGolf, alt: "Masters golf party sugar cookies with green jackets, azaleas, USA course map, golf balls, and putting greens", caption: "Masters Watch Party", category: "occasion" },
+  { src: occasionMastersJacket, alt: "Masters themed sugar cookies with green jackets, yellow USA course map with red flag, and dimpled golf balls", caption: "Green Jacket Sunday", category: "occasion" },
+  { src: occasionMonogramG, alt: "White-on-white script 'G' monogram sugar cookies for an elegant DMV event", caption: "Script G Monogram", category: "occasion" },
+  { src: occasionUnicorns, alt: "Pastel unicorn and rainbow sugar cookies with gold horns and cloud accents", caption: "Unicorns & Rainbows", category: "occasion" },
+  { src: occasionToughCookie, alt: "Breast cancer awareness sugar cookies with 'Tough Cookie', 'Ring That Bell', 'Cancer messed with the wrong girl', and pink ribbons", caption: "Tough Cookie — Awareness Set", category: "occasion" },
+  { src: occasionMarylandCrabs, alt: "Maryland themed sugar cookies with red crabs, state flag, Natty Boh cans, and sailboats for a DMV summer party", caption: "Maryland Summer", category: "occasion" },
+  { src: occasionPinkRibbon, alt: "Pink ribbon breast cancer awareness sugar cookies on heart and awareness ribbon shapes", caption: "Pink Ribbon Awareness", category: "occasion" },
+  { src: occasionTeddyBears, alt: "Airbrushed brown teddy bear sugar cookies with paw pads for a DMV bear-themed event", caption: "Teddy Bear Set", category: "occasion" },
+  { src: occasionShootingStars, alt: "Yellow shooting star and star sugar cookies for a celebration favor set", caption: "Shooting Stars Favors", category: "occasion" },
+  { src: occasionBalletSlippers, alt: "Pink and gold ballet slipper sugar cookies with piped bows for a dance recital", caption: "Ballet Slippers — Recital", category: "occasion" },
+  { src: occasionTeacherApple, alt: "Teacher appreciation sugar cookies with a red apple and notebook paper marked 'A+'", caption: "A+ Teacher Appreciation", category: "occasion" },
+  { src: occasionLemonsTiles, alt: "Amalfi inspired sugar cookies with yellow lemons, lemon slices, and blue Mediterranean tile squares", caption: "Amalfi Lemons & Tiles", category: "occasion" },
+  { src: occasionFootball, alt: "Game day sugar cookies with a brown football, blue 'Go Team' helmet, and X's and O's playbook", caption: "Game Day — Go Team", category: "occasion" },
+  { src: occasionCookout, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
+  { src: collegeJmu, alt: "James Madison University JMU sugar cookies in the shape of the state of Virginia with royal blue icing and gold JMU lettering", caption: "JMU — Virginia Bound", category: "college" },
+  { src: collegeAlabama, alt: "Alabama 'Bama Bound Class of 2024' graduation sugar cookies with crimson elephant, script A, grad caps, and shield", caption: "Bama Bound — Class of 2024", category: "college" },
 ];
 
 const PAGE_SIZE = 12;
@@ -145,7 +145,7 @@ function Nav() {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo.url} alt="Tailored Sweet Treats logo" className="h-12 w-12 rounded-full" />
+          <img src={logo} alt="Tailored Sweet Treats logo" className="h-12 w-12 rounded-full" />
           <span className="font-display text-2xl italic tracking-tight">Tailored Sweet Treats</span>
         </a>
         <div className="hidden gap-10 font-mono text-[11px] uppercase tracking-[0.2em] text-muted md:flex">
@@ -175,7 +175,7 @@ function Hero() {
       </div>
       <div className="animate-reveal w-full [animation-delay:200ms]">
         <img
-          src={heroCookies.url}
+          src={heroCookies}
           alt="Hand-decorated sugar cookies for every celebration"
           width={1600}
           height={900}
@@ -330,7 +330,7 @@ function About() {
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
       <div className="order-2 md:order-1">
         <img
-          src={aboutMaker.url}
+          src={aboutMaker}
           alt="Taylor with her family — husband, two little ones, and their goldendoodle"
           width={800}
           height={1000}
