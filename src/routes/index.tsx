@@ -163,14 +163,14 @@ function Nav() {
 function Hero() {
   return (
     <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
-      {/* Mobile only: top half of the collage above the text */}
-      <div className="animate-reveal relative mb-10 w-full overflow-hidden aspect-[32/3] md:hidden">
+      {/* Mobile only: left half of the collage above the text */}
+      <div className="animate-reveal relative mb-10 w-full overflow-hidden aspect-[16/3] md:hidden">
         <img
           src={heroCookies}
           alt="Hand-decorated sugar cookies for every celebration"
           width={1920}
           height={360}
-          className="absolute inset-x-0 top-0 w-full"
+          className="absolute left-0 top-0 h-full w-[200%] max-w-none object-cover object-left"
         />
       </div>
       <div className="mx-auto max-w-5xl px-6">
@@ -183,17 +183,18 @@ function Hero() {
           Custom, hand-decorated cookies made in Loudoun County, Virginia, for birthdays, showers, weddings, holidays, and every celebration in between.
         </p>
       </div>
-      {/* Mobile only: bottom half of the collage below the text */}
-      <div className="animate-reveal relative w-full overflow-hidden aspect-[32/3] [animation-delay:200ms] md:hidden">
+      {/* Mobile only: right half of the collage below the text */}
+      <div className="animate-reveal relative w-full overflow-hidden aspect-[16/3] [animation-delay:200ms] md:hidden">
         <img
           src={heroCookies}
           alt=""
           aria-hidden="true"
           width={1920}
           height={360}
-          className="absolute inset-x-0 bottom-0 w-full"
+          className="absolute right-0 top-0 h-full w-[200%] max-w-none object-cover object-right"
         />
       </div>
+
       {/* Desktop: full image below the text */}
       <div className="animate-reveal hidden w-full [animation-delay:200ms] md:block">
         <img
@@ -352,6 +353,15 @@ function About() {
   return (
     <section id="about" className="mx-auto grid max-w-7xl items-center gap-16 px-6 py-32 md:grid-cols-2 md:gap-20">
       <div className="order-1 md:order-1">
+        {/* Mobile only: heading above the photo */}
+        <div className="md:hidden">
+          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+            Meet the baker
+          </span>
+          <h2 className="mb-8 font-display text-5xl leading-[1.05]">
+            Hi, I'm Taylor.
+          </h2>
+        </div>
         <img
           src={aboutMaker}
           alt="Taylor with her family — husband, two little ones, and their goldendoodle"
@@ -362,12 +372,15 @@ function About() {
         />
       </div>
       <div className="order-2 md:order-2">
-        <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-          Meet the baker
-        </span>
-        <h2 className="mb-8 font-display text-5xl leading-[1.05] md:text-6xl">
-          Hi, I'm Taylor.
-        </h2>
+        <div className="hidden md:block">
+          <span className="mb-6 block font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
+            Meet the baker
+          </span>
+          <h2 className="mb-8 font-display text-5xl leading-[1.05] md:text-6xl">
+            Hi, I'm Taylor.
+          </h2>
+        </div>
+
         <p className="mb-6 leading-relaxed text-muted-foreground">
           Tailored Sweet Treats grew out of a love for baking that’s been with me forever.
         </p>
