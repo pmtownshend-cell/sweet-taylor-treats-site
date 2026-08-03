@@ -162,9 +162,9 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="flex flex-col items-center pt-20 pb-0 text-center md:pt-24">
+    <section id="top" className="flex flex-col items-center pt-6 pb-0 text-center md:pt-24">
       {/* Mobile only: left half of the collage above the text */}
-      <div className="animate-reveal relative mb-10 w-full overflow-hidden aspect-[16/3] md:hidden">
+      <div className="animate-reveal relative mb-10 w-full overflow-hidden aspect-[8/3] md:hidden">
         <img
           src={heroCookies}
           alt="Hand-decorated sugar cookies for every celebration"
@@ -184,7 +184,7 @@ function Hero() {
         </p>
       </div>
       {/* Mobile only: right half of the collage below the text */}
-      <div className="animate-reveal relative w-full overflow-hidden aspect-[16/3] [animation-delay:200ms] md:hidden">
+      <div className="animate-reveal relative w-full overflow-hidden aspect-[8/3] [animation-delay:200ms] md:hidden">
         <img
           src={heroCookies}
           alt=""
