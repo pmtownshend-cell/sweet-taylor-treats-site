@@ -577,10 +577,10 @@ function Footer() {
         <div className="flex flex-col items-center gap-2 md:items-start">
           <span className="font-display text-xl italic">Tailored Sweet Treats</span>
           <a
-            href="mailto:hello@tailoredsweettreats.com"
+            href="mailto:tailoredsweettreats@gmail.com"
             className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground hover:text-accent"
           >
-            hello@tailoredsweettreats.com
+            tailoredsweettreats@gmail.com
           </a>
           <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
             Based in Loudoun County, Virginia
