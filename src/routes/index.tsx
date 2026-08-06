@@ -53,6 +53,8 @@ import occasionTeacherApple from "@/assets/gallery/occasion-teacher-apple-aplus.
 import occasionLemonsTiles from "@/assets/gallery/occasion-lemons-blue-tiles.jpg";
 import occasionFootball from "@/assets/gallery/occasion-football-go-team.jpg";
 import occasionCookout from "@/assets/gallery/occasion-cookout-burgers-watermelon.jpg";
+import babyInBloomMagnolia from "@/assets/gallery/baby-in-bloom-magnolia.jpg";
+import babyWhatsTheScoop from "@/assets/gallery/baby-whats-the-scoop-gender-reveal.jpg";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -122,6 +124,8 @@ const GALLERY: GalleryItem[] = [
   { src: occasionCookout, alt: "Summer cookout sugar cookies with cheeseburgers, hot dogs, watermelon slices, and ketchup and mustard bottles", caption: "Summer Cookout", category: "occasion" },
   { src: collegeJmu, alt: "James Madison University JMU sugar cookies in the shape of the state of Virginia with royal blue icing and gold JMU lettering", caption: "JMU — Virginia Bound", category: "college" },
   { src: collegeAlabama, alt: "Alabama 'Bama Bound Class of 2024' graduation sugar cookies with crimson elephant, script A, grad caps, and shield", caption: "Bama Bound — Class of 2024", category: "college" },
+  { src: babyInBloomMagnolia, alt: "Pink 'Baby in Bloom' and 'Baby Magnolia' sugar cookies with florals, a pink arch, and a bunny onesie", caption: "Baby in Bloom", category: "baby" },
+  { src: babyWhatsTheScoop, alt: "Ice cream themed gender reveal sugar cookies with 'What's the Scoop?' plaques, ice cream trucks, and cones", caption: "What's the Scoop? — Gender Reveal", category: "baby" },
 ];
 
 const PAGE_SIZE = 12;
